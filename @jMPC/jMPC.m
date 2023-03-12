@@ -178,7 +178,7 @@ classdef jMPC
                         simresult = simJMPC(J,simopts);
                     end
                 case 'simulink'
-                    sk = which('simset.m');
+                    sk = which('simset');
                     if(isempty(sk)), error('Simulink is not found on your system'); end
                     if(J.mpcopts.LookAhead == 1), error('Simulink cannot model setpoint look ahead!'); end
                     if(isa(J.Model.A,'single')), error('Simulink does not currently simulate single precision jMPC controllers'); end

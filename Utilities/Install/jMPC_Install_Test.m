@@ -22,7 +22,7 @@ ext = ['.' mexext];
 
 %% TEST 1 - Check Main Paths
 if(verb); fprintf('Checking Paths... '); end
-paths = {'@jMPC','@jSIM','@jNL','@jGUI','@ScrollPlot','GUI','QP Solvers','Simulink','Help','jMPC_Tests'};
+paths = {'@jMPC','@jSIM','@jNL','@jGUI','@ScrollPlot','GUI','Solvers','Simulink'};
 len = length(paths);
 for i = 1:len
     pass = exist(paths{i},'dir');

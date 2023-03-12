@@ -3,7 +3,11 @@ function current_version = jMPCver
 %  Return jMPC software version. This document also contains version update
 %  information.
 
-current_version = 3.21;
+current_version = 3.22;
+
+%v3.22 (13/03/23)
+% - Updated for Control Engineering reference
+% - Rebuilt all MEX files
 
 %v3.21 (25/09/14)
 % - Corrected installer to check for 2012a or later
