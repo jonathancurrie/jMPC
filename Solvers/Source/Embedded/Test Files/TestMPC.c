@@ -1,5 +1,5 @@
 /* MPC EMBED TEST - MEX Wrapper to Test MPC EMBED in MATLAB
- * Copyright (C) Jonathan Currie 2012 (I2C2) 
+ * Copyright (C) Jonathan Currie 2012 (Control Engineering) 
  */
 
 //Note extra variables are automatically inserted here by embed()

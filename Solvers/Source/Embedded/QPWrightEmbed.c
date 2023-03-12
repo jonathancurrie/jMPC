@@ -1,5 +1,5 @@
 /* QPWRIGHT EMBED - Implementation of Wright's Method to Solve Embedded QPs
- * Copyright (C) Jonathan Currie 2012-2013 (I2C2) 
+ * Copyright (C) Jonathan Currie 2012-2013 (Control Engineering) 
  */
 
 //EMBED START

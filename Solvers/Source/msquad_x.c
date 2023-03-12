@@ -21,7 +21,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
     //Input Error Check
     if(nrhs < 1) {
         if(nlhs == 1) {
-            plhs[0] = mxCreateString("jMPC Toolbox - Copyright Jonathan Currie 2013 (www.i2c2.aut.ac.nz)");
+            plhs[0] = mxCreateString("jMPC Toolbox - Copyright Jonathan Currie 2013 (www.controlengineering.co.nz)");
             return;
         }
         #ifdef MEHROTRA               
@@ -31,7 +31,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
         #else
             mexPrintf("msquad_wright: High-Speed Interior-Point QP Solver [Single Precision]\n\n");
         #endif            
-        mexPrintf("  Copyright (C) 2011-2013 Jonathan Currie (I2C2)\n  www.i2c2.aut.ac.nz\n\n");
+        mexPrintf("  Copyright (C) 2011-2013 Jonathan Currie (Control Engineering)\n  www.controlengineering.co.nz\n\n");
         #ifdef MEHROTRA
             mexPrintf("Usage: [z,exitflag,iter,lam,t] = msquad_mehrotra(H,f,A,b,maxiter,tol,verbose,z0,lam0,t0)\n");
         #elif defined NOHEUR

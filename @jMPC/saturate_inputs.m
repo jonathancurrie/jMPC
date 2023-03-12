@@ -4,7 +4,7 @@ function [optdel_u,u] = saturate_inputs(optdel_u,u,n_in,cons)
 %   Called By jMPC/sim/simMPC
 
 %   Jonathan Currie (C)
-%   AUT University 2010
+%   Control Engineering 2010
 
 %Check if Problem is Constrained
 if(cons.uncon || isempty(cons.u))

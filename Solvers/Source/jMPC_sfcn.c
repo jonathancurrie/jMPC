@@ -1,7 +1,7 @@
 /* jMPC Controller Engine Implemented as a C S Function 
  *
  * Jonathan Currie (C)
- * Industrial Information & Control Centre (I2C2) 2011-2013 */
+ * Control Engineering 2011-2013 */
 
 #define S_FUNCTION_NAME jMPC_sfcn
 #define S_FUNCTION_LEVEL 2

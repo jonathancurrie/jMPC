@@ -5,7 +5,7 @@ function sfun_3Dwgraph(block)
 % Visualization with Graphs'
 
 %   Jonathan Currie (C)
-%   AUT University 2011 
+%   Control Engineering 2011 
 
     setup(block);
   

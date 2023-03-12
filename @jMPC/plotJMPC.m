@@ -4,7 +4,7 @@ function h = plotJMPC(MPCobj,simres,mode,plot_model)
 %   Called By jMPC\plot
 
 %   Jonathan Currie (C)
-%   AUT University 2009
+%   Control Engineering 2009
 
 %Distribute structure components
 u = simres.plotvec.u; 

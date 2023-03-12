@@ -4,7 +4,7 @@ function [del_u,stats,warm] = solve_qp(J,b,f,k,tstart,forceQP)
 %   Called By jMPC\solve_input
 
 %   Jonathan Currie (C)
-%   AUT University 2013
+%   Control Engineering 2013
 
 %Exitflags
 % 1 - QP solved successfully

@@ -4,7 +4,7 @@ function MPCstruct = buildJMPC(Model,Np,Nc,uwt,ywt,con,Kest,opts)
 %   Called By jMPC Constructor
 
 %   Jonathan Currie (C)
-%   AUT University 2011
+%   Control Engineering 2011
 
 %Check for Nonlinear Simulation
 if(isa(Model,'jNL'))

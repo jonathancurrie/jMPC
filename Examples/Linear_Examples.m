@@ -5,7 +5,7 @@
 % Models are named according to author.
 
 %   Jonathan Currie (C)
-%   AUT University 2011
+%   Control Engineering 2011
 
 %% Oscillatory SISO Example
 % Starting with a MATLAB transfer function with an oscillatory response
@@ -163,7 +163,7 @@ simresult = sim(MPC1,simopts,'Simulink');
 plot(MPC1,simresult,'timing');
 
 %% MPCTools 3-DOF Helicopter
-% Ref: J. Åkesson (2006) MPCtools 1.0 Reference Manual, Lund Institute of
+% Ref: J. ï¿½kesson (2006) MPCtools 1.0 Reference Manual, Lund Institute of
 % Technology, page 24. Also similar to Quanser 3-DOF Helicopter except
 % reordered states.
 

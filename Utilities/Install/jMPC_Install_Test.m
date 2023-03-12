@@ -5,7 +5,7 @@ function ok = jMPC_Install_Test(varargin)
 % successful. 
 
 %   Jonathan Currie (C)
-%   AUT University 2009
+%   Control Engineering 2009
 
 %Set Verbosity
 if(nargin < 1)

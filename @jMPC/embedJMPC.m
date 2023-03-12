@@ -4,7 +4,7 @@ function [bytes,QPres,MPCres,h] = embedJMPC(J,simopts,opts)
 %   Called By jMPC/embed
 
 %   Copyright (C) Jonathan Currie
-%   Industrial Information & Control Centre (I2C2) 2012-2013
+%   Control Engineering 2012-2013
 
 global strprec prec constbytes dynbytes qpbytes mpcbytes tol maxiter arch verb
 constbytes = 0; dynbytes = 0; qpbytes = 0; mpcbytes = 0; 
@@ -477,7 +477,7 @@ end
 %Otherwise print header
 fprintf(fid,'/*------------------------------------------------\n');
 fprintf(fid,'  jMPC Auto Code Generator for Embedded MPC\n'); 
-fprintf(fid,'  Version %1.1f by Jonathan Currie (www.i2c2.aut.ac.nz)\n',jver); 
+fprintf(fid,'  Version %1.1f by Jonathan Currie (www.controlengineering.co.nz)\n',jver); 
 fprintf(fid,'  Code Generated on: %s\n  Architecture: %s, Precision: %s [%s]\n',datestr(now),arch,prec,strprec);
 fprintf(fid,'  ------------------------------------------------ */\n\n');
 

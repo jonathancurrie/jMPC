@@ -1,9 +1,9 @@
 %% MPCTools 3-DOF Helicopter
-% Ref: J. Åkesson (2006) MPCtools 1.0 Reference Manual, Lund Institute of
+% Ref: J. ï¿½kesson (2006) MPCtools 1.0 Reference Manual, Lund Institute of
 % Technology, page 24. Also similar to Quanser 3-DOF Helicopter except
 % reordered states.
 
-%   Copyright (C) 2011 Jonathan Currie (I2C2)
+%   Copyright (C) 2011 Jonathan Currie (Control Engineering)
 
 % You must run through each cell block in order
 

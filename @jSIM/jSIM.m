@@ -23,7 +23,7 @@ classdef jSIM
 %   See also jMPC jSS jNL
 
 %   Jonathan Currie (C)
-%   AUT University 2011
+%   Control Engineering 2011
     
     properties
         mode        % Simulation Mode

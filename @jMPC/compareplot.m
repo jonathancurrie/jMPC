@@ -4,7 +4,7 @@ function [dy,du,h] = compareplot(sim1,sim2,plotmode)
 %   Called By jMPC\compare
 
 %   Jonathan Currie (C)
-%   AUT University 2011
+%   Control Engineering 2011
 
 %Distribute structure components
 yp1 = sim1.plotvec.yp;

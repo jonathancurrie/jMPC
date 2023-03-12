@@ -2,7 +2,7 @@ function sfun_jNL(block)
 % Nonlinear Model S Function
 
 %   Jonathan Currie (C)
-%   AUT University 2011    
+%   Control Engineering 2011    
 
     setup(block);
 

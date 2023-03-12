@@ -4,7 +4,7 @@ function J = NLupdate(J,us,xs)
 %   Called by jMPC/simNLMPC
 
 %   Jonathan Currie
-%   AUT University 2011
+%   Control Engineering 2011
 
 
 %Extract NL Model

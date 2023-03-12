@@ -4,7 +4,7 @@ function displaySIM(simopt)
 %   Called By jSIM Class
 
 %   Jonathan Currie (C)
-%   AUT University 2011
+%   Control Engineering 2011
 
 %**************** Title ****************%
 disp('------------------------------------------------');

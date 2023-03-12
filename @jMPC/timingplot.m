@@ -4,7 +4,7 @@ function h = timingplot(MPCobj,simres,mode)
 %   Called By jMPC\plot
 
 %   Jonathan Currie (C)
-%   AUT University 2011
+%   Control Engineering 2011
 
 %Distribute structure components
 yp = simres.plotvec.yp;

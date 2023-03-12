@@ -2,7 +2,7 @@ function varargout = jMPC_GUI(varargin)
 %Creates the Main GUI for Simulating a jMPC Controller & Plant
 
 % Jonathan Currie (C)
-% AUT University 2011 
+% Control Engineering 2011 
 
 % Please note this GUI uses tabpanel 2.8.1 by Elmar Tarajan - covered by a
 % BSD License.

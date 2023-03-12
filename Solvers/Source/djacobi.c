@@ -1,9 +1,9 @@
 /* A simple MEX Interface to the MKL djacobi Function
  * Released Under the BSD 3-Clause License:
- * http://www.i2c2.aut.ac.nz/Wiki/OPTI/index.php/DL/License
+ * http://www.controlengineering.co.nz/Wiki/OPTI/index.php/DL/License
  *
  * Copyright (C) Jonathan Currie 2013
- * www.i2c2.aut.ac.nz                             
+ * www.controlengineering.co.nz                             
  */
 
 #include <mex.h>

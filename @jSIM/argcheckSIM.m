@@ -4,7 +4,7 @@ function argcheckSIM(Plant,sizes,T,setp,udist,mdist,ydist,opts)
 %   Called By jSIM Constructor
 
 %   Jonathan Currie (C)
-%   AUT University 2011
+%   Control Engineering 2011
 
 %Check obvious points
 if(isempty(Plant))

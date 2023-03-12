@@ -4,7 +4,7 @@ function nMPC = buildMatlabMPC(J,simopts)
 %   Called By jMPC\sim
 
 %   Jonathan Currie (C)
-%   AUT University 2011
+%   Control Engineering 2011
 
 check_mpc();
 

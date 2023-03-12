@@ -6,7 +6,7 @@
 
 
 WorldInfo {
-	info	"Copyright I2C2 2011"
+	info	"Copyright Control Engineering 2011"
 	title	"CSTR"
 }
 Viewpoint {
@@ -799,7 +799,7 @@ DEF OutCold Transform {
 #				}
 #
 #				texture	ImageTexture {
-#					url	"texture/I2C2Grey.jpg"
+#					url	"texture/Control EngineeringGrey.jpg"
 #					repeatS	FALSE
 #					repeatT	FALSE
 #				}

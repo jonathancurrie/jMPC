@@ -4,7 +4,7 @@ function opts = argcheckMPC(Model,Np,Nc,uwt,ywt,con,Kest,opts)
 %   Called By jMPC Constructor
 
 %   Jonathan Currie (C)
-%   AUT University 2011
+%   Control Engineering 2011
 
 %Check QP solver (empty means use internal heuristic)
 if(isempty(opts.QPSolver)), opts.QPSolver = 'mehrotra'; end

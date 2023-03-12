@@ -4,7 +4,7 @@ function simresult = simPILJMPC(J,simopts)
 %   Called By jMPC/sim
 
 %   Jonathan Currie (C)
-%   AUT University 2012
+%   Control Engineering 2012
 
 %Allocate initial values
 sPlant = simopts.Plant;

@@ -23,7 +23,7 @@ classdef jSS
 %   jSS.step jSS.impulse
 
 %   Jonathan Currie (C)
-%   AUT University 2009
+%   Control Engineering 2009
     
     properties (SetAccess = private)
         A               % SS A (States) Matrix

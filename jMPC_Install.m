@@ -69,9 +69,6 @@ if(strcmpi(in,'y'))
 end
 fprintf('\n');
 
-%Launch Help Browser
-% web('jMPC_Main.html','-helpbrowser');
-
 fprintf('\njMPC Toolbox Installation Complete!\n');
 disp('------------------------------------------------')
 
@@ -158,14 +155,15 @@ end
 mver = ver('MATLAB');
 fprintf('- Checking MATLAB version and operating system...\n');
 vv = regexp(mver.Version,'\.','split');
-if(str2double(vv{1}) < 8)
-    if(str2double(vv{2}) <= 14)
-        fprintf(2,'jMPC is designed for MATLAB 2012b or above.\nIt will install into lower versions, but you may experience reliability problems.\nPlease upgrade to R2012b or later.\n');
+if(str2double(vv{1}) <= 9)
+    if(str2double(vv{2}) <= 4)
+        fprintf(2,'jMPC is designed for MATLAB 2018b or above.\nIt will install into lower versions, but you may experience reliability problems.\nPlease upgrade to R2018b or later.\n');
     end
 end
 switch(mexext)
     case 'mexw32'
-        fprintf('MATLAB %s 32bit (Windows x86) detected\n',mver.Release);
+        warning('jMPC Toolbox contains MEX files compiled for 64bit Windows PCs only. Only MATLAB MPC simulations will be available.');
+        OK = 1; return;
     case 'mexw64'
         fprintf('MATLAB %s 64bit (Windows x64) detected\n',mver.Release);
     otherwise      
@@ -178,8 +176,8 @@ fprintf('\n- Checking for required pre-requisites...\n');
 havVC = true;
 missing = false;
 
-%Check for VC++ 2012
-cd 'QP Solvers'
+%Check for VC++ 2019
+cd 'Solvers'
 try
     a = mquad_wright; %#ok<NASGU>
 catch
@@ -194,9 +192,9 @@ end
 
 %Print Missing PreReqs
 if(~havVC)
-    fprintf(2,'Cannot find the Microsoft VC++ 2012 %s Redistributable!\n',arch); 
+    fprintf(2,'Cannot find the Microsoft VC++ 2019 %s Redistributable!\n',arch); 
 else
-    fprintf('Found the Microsoft VC++ 2012 %s Redistributable\n',arch); 
+    fprintf('Found the Microsoft VC++ 2019 %s Redistributable\n',arch); 
 end
 
 %Install Instructions for each Package
@@ -204,7 +202,7 @@ if(missing)
     fprintf(2,'\nYou are missing one or more pre-requisites. Please read the instructions below carefully to install them:\n\n');
     
     if(~havVC)
-        fprintf(2,' Microsoft VC++ 2012:\n  - Download from: http://www.microsoft.com/en-us/download/details.aspx?id=30679\n');
+        fprintf(2,' Microsoft VC++ 2019:\n  - Download from: https://aka.ms/vs/17/release/vc_redist.x64.exe\n');
         fprintf(2,'  - When prompted, select the ''%s'' package. Once downloaded, install it.\n\n',arch);
     end
     

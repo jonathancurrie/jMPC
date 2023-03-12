@@ -6,7 +6,7 @@ function [z,exitflag,iter,lam,t] = quad_mehrotra(H,f,A,b,maxiter,tol,verbose,z0,
 % Reference: Object Orientated Software for Quadratic Programming by E.
 % Gertz and S. Wright. University of Wisconsin-Madison.
 
-%   Copyright (C) 2011-2013 Jonathan Currie (www.i2c2.aut.ac.nz)
+%   Copyright (C) 2011-2013 Jonathan Currie (www.controlengineering.co.nz)
 
 %Length of constraint matrix
 mc = length(b); 

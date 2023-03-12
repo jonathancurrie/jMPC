@@ -1,5 +1,5 @@
 /* SERIAL EMBED - Serial Port Routine for Processor In the Loop (PIL) Simulation
- * Copyright (C) Jonathan Currie 2012 (I2C2) 
+ * Copyright (C) Jonathan Currie 2012 (Control Engineering) 
  */
 
 //EMBED START

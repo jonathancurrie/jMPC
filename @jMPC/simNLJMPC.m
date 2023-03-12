@@ -4,7 +4,7 @@ function simresult = simNLJMPC(J,simopts,verb)
 %   Called By jMPC/sim
 
 %   Jonathan Currie (C)
-%   AUT University 2011
+%   Control Engineering 2011
 
 %Get Bias Terms
 u_op = J.mpcopts.lin.u_op;

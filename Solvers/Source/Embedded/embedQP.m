@@ -185,7 +185,7 @@ end
 %Otherwise print header
 fprintf(fid,'/*------------------------------------------------\n');
 fprintf(fid,'  jMPC Auto Code Generator for Embedded QP\n'); 
-fprintf(fid,'  Jonathan Currie (www.i2c2.aut.ac.nz)\n'); 
+fprintf(fid,'  Jonathan Currie (www.controlengineering.co.nz)\n'); 
 fprintf(fid,'  Code Generated on: %s\n',datestr(now));
 fprintf(fid,'  ------------------------------------------------ */\n\n');
 

@@ -4,7 +4,7 @@ function [b,f] = update_rhs(J,del_xm,u,setp,mdist,k)
 %   Called By jMPC\mpcsolve
 
 %   Jonathan Currie (C)
-%   AUT University 2011
+%   Control Engineering 2011
 
 % %Update quadprog f vector
 len = size(setp,1); if(k > len); k = len; warning('jMPCToolbox:SETP','Setpoint Shorter Than Expected - Copying Last Row'); end

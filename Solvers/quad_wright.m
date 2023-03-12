@@ -9,7 +9,7 @@ function [z,exitflag,iter,lam,t] = quad_wright(H,f,A,b,maxiter,tol,verbose,z0,la
 % Predictive Control," in Chemical Process Control-V, CACHE, AIChE 
 % Symposium, 1997, pp. 147-155.
 
-%   Copyright (C) 2011-2013 Jonathan Currie (www.i2c2.aut.ac.nz)
+%   Copyright (C) 2011-2013 Jonathan Currie (www.controlengineering.co.nz)
 
 %Length of constraint matrix
 mc = length(b); 

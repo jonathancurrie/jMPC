@@ -2,7 +2,7 @@ function varargout = load_window(varargin)
 %Create a GUI for loading from the Workspace
 
 %   Jonathan Currie (C)
-%   AUT University 2009 
+%   Control Engineering 2009 
 
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...

@@ -28,7 +28,7 @@ classdef jNL < handle
 %   See also jNL.sim jSS
 
 %   Jonathan Currie (C)
-%   AUT University 2011
+%   Control Engineering 2011
     
     properties        
         param       % model parameters (optional)

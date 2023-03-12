@@ -29,7 +29,7 @@ classdef ScrollPlot
 %   See also ScrollPlot.plot ScrollPlot.stairs
 
 %   Jonathan Currie (C)
-%   AUT University 2009
+%   Control Engineering 2009
     
     properties(SetAccess = private)
         Mode                % Drawing Mode 1 = line only, 2 = +constraints, 3 = +setpoint

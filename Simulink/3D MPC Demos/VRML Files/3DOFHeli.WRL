@@ -6,7 +6,7 @@
 
 
 WorldInfo {
-	info	"Copright I2C2"
+	info	"Copright Control Engineering"
 	title	"3DOF Helicopter"
 }
 Background {

@@ -1,5 +1,5 @@
 /* BENCHMARK MPC - A C File For Benchmarking MPC Performance
- * Copyright (C) Jonathan Currie 2014 (I2C2) 
+ * Copyright (C) Jonathan Currie 2014 (Control Engineering) 
  */
 
 //Note extra variables are automatically inserted here by embed()

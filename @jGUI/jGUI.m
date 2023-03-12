@@ -45,7 +45,7 @@ classdef jGUI
 %   See also jMPC jSS jNL
 
 %   Jonathan Currie (C)
-%   AUT University 2009
+%   Control Engineering 2009
     
     properties
         Plant;          % Simulation Plant

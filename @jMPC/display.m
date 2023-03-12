@@ -4,7 +4,7 @@ function display(J)
 %   Called By jMPC Class
 
 %   Jonathan Currie (C)
-%   AUT University 2009
+%   Control Engineering 2009
 
 %Distribute Structure Variables;
 Model = J.StdModel; Np = J.Np; Nc = J.Nc;

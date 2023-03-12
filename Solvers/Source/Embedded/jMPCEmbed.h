@@ -1,5 +1,5 @@
 /* JMPC EMBED - Header file for Embedded jMPC Controllers
- * Copyright (C) Jonathan Currie 2012-2013 (I2C2) 
+ * Copyright (C) Jonathan Currie 2012-2013 (Control Engineering) 
  */
 
 //EMBED START

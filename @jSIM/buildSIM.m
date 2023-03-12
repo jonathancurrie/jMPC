@@ -4,7 +4,7 @@ function simopts = buildSIM(MPCobj,Plant,T,setp,udist,mdist,ydist)
 %   Called By jSIM Constructor
 
 %   Jonathan Currie (C)
-%   AUT University 2011
+%   Control Engineering 2011
 
 sizes = MPCobj.sizes;
 index = MPCobj.index;

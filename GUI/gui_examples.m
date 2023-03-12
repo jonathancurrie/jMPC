@@ -2,7 +2,7 @@ function Example = gui_examples(index)
 % Example Setups for the GUI
 
 % Jonathan Currie (C)
-% AUT University 2009
+% Control Engineering 2009
 
 switch(index)
     %Rossiter SISO

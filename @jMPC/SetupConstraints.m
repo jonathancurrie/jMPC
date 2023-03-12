@@ -1,7 +1,7 @@
 function con = SetupConstraints(con,Phi,Np,Nb,nm_in,n_out,opts)
 %Collect MPC Constraints and form Inequality Constraints
 %
-%   Copyright (C) 2011-2013 Jonathan Currie (www.i2c2.aut.ac.nz)
+%   Copyright (C) 2011-2013 Jonathan Currie (www.controlengineering.co.nz)
 
 Nbin = Nb*nm_in;
 

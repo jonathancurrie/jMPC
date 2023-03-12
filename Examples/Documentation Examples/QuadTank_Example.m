@@ -5,7 +5,7 @@
 % Institute of Technology, 2006"
 % Reference [2] "Coupled Water Tanks User Manual, QUANSER PDF, 2003"
 
-%   Copyright (C) 2011 Jonathan Currie (I2C2)
+%   Copyright (C) 2011 Jonathan Currie (Control Engineering)
 
 % You must run through each cell block in order
 

@@ -5,10 +5,10 @@
 % nonlinear plant simulations. Models are named according to author.
 
 %   Jonathan Currie (C)
-%   AUT University 2011
+%   Control Engineering 2011
 
 %% MPCTools 3-DOF Helicopter
-% Ref: J. Åkesson (2006) MPCtools 1.0 Reference Manual, Lund Institute of
+% Ref: J. ï¿½kesson (2006) MPCtools 1.0 Reference Manual, Lund Institute of
 % Technology, page 24. Also similar to Quanser 3-DOF Helicopter except
 % reordered states.
 
@@ -98,7 +98,7 @@ plot(MPC1,simresult,'detail');
 %% Quanser Quadruple Tank
 % Ref: Quanser (2003) Coupled Tanks User Manual (www.quanser.com) +
 % supplied MALTAB lab files for parameters.
-% ODE Ref: J. Åkesson (2006) MPCtools 1.0 Reference Manual, Lund
+% ODE Ref: J. ï¿½kesson (2006) MPCtools 1.0 Reference Manual, Lund
 % Institute of Technology, page 20.
 
 % This example follows closely to the linear example except all outputs can

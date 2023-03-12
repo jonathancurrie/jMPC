@@ -4,7 +4,7 @@ function [QP,state_est] = create_QP(Model,Phi,Np,Nb,uwt,ywt,con,Kest,sizes,opts)
 %   Called By buildMPC
 
 %   Jonathan Currie (C)
-%   AUT University 2011
+%   Control Engineering 2011
 
 states = sizes.states;
 nm_in = sizes.nm_in;

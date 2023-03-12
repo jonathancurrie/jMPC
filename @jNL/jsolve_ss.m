@@ -4,7 +4,7 @@ function [x0,exit_flag] = jsolve_ss(fcn,u0,x0,param,odeS,verb) %#ok<INUSL>
 %   Called By jNL/linearize
 
 %   Jonathan Currie (C)
-%   AUT University 2011
+%   Control Engineering 2011
 
 global yold counter tol
 

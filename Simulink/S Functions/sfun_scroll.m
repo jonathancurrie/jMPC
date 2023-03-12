@@ -2,7 +2,7 @@ function sfun_scroll(block)
 %Scrolling Simulink Display
 
 %   Jonathan Currie (C)
-%   AUT University 2011
+%   Control Engineering 2011
 
 setup(block);
 

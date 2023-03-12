@@ -1,6 +1,6 @@
 //***** Solve QP Using Mehrotra's Method *****//
 
-// Copyright (C) 2009-2013 Jonathan Currie (www.i2c2.aut.ac.nz)
+// Copyright (C) 2009-2013 Jonathan Currie (www.controlengineering.co.nz)
 
 #include <qp_header.h>
 #include <qp_mem.h>

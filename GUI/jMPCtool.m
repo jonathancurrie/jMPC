@@ -2,7 +2,7 @@ function jMPCtool()
 %Launch the jMPC Simulation Tool
 
 %   Jonathan Currie (C)
-%   AUT University 2009 
+%   Control Engineering 2009 
 
 try
     jMPC_GUI();

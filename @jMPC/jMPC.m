@@ -38,7 +38,7 @@ classdef jMPC
 %   See also jMPC.sim jMPC.plot jMPC.mpcsolve jSIM jSS jNL jGUI ScrollPlot
     
 %   Jonathan Currie (C)
-%   AUT University 2011
+%   Control Engineering 2011
 
     properties (SetAccess = private)
         Model           % Augmented jSS Model       

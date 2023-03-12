@@ -1,5 +1,5 @@
 /* JMATH - Simple Linear Algebra Routines for Embedded MPC 
- * Copyright (C) Jonathan Currie 2012 (I2C2) 
+ * Copyright (C) Jonathan Currie 2012 (Control Engineering) 
  */
 
 //EMBED START

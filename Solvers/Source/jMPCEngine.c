@@ -1,6 +1,6 @@
 /* jMPC Controller Engine Implemented as a C MEX Function 
  *
- * Copyright (C) 2009-2013 Jonathan Currie (www.i2c2.aut.ac.nz)
+ * Copyright (C) 2009-2013 Jonathan Currie (www.controlengineering.co.nz)
  */
 
 #include <mex.h>
@@ -84,7 +84,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
         #else
             mexPrintf("jMPCEngine: Accelerated Linear MPC Simulation Engine [Double Precision]\n\n");
         #endif
-        mexPrintf("  Copyright (C) 2011-2013 Jonathan Currie (I2C2)\n  www.i2c2.aut.ac.nz\n\n");
+        mexPrintf("  Copyright (C) 2011-2013 Jonathan Currie (Control Engineering)\n  www.controlengineering.co.nz\n\n");
         #ifdef SINGLE_PREC
             mexPrintf("Usage: results = jMPCSEngine(jMPCobj,jSIMobj)\n\n");
         #else

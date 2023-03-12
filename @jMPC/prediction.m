@@ -4,7 +4,7 @@ function pred = prediction(Model,QPModel,Np,Nc,Nb,index)
 %   Called By buildMPC
 
 %   Jonathan Currie (C)
-%   AUT University 2011
+%   Control Engineering 2011
 
 %Extract ss Data
 [A,B,C] = ssdata(Model);
