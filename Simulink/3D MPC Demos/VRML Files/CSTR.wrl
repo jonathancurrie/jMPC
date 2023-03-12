@@ -1,0 +1,815 @@
+#VRML V2.0 utf8
+
+#Created with V-Realm Builder v2.0
+#Integrated Data Systems Inc.
+#www.ids-net.com
+
+
+WorldInfo {
+	info	"Copyright I2C2 2011"
+	title	"CSTR"
+}
+Viewpoint {
+	orientation	-1 0 8e-005  0.251327
+	position	0 3.1 6.3142
+	description	"Normal"
+}
+Background {
+	groundAngle	[  ]
+	groundColor	0.57 0.57 0.57
+	skyAngle	[  ]
+	skyColor	0.6 0.6 0.6
+}
+DEF Tank Transform {
+	translation	-2.6226e-006 1.66893e-006 -2.99187e-008
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+			}
+
+		}
+
+		geometry	Extrusion {
+			beginCap	FALSE
+			endCap	FALSE
+			ccw	TRUE
+			convex	TRUE
+			creaseAngle	0.785
+			solid	TRUE
+			crossSection	[ 1 0,
+					  0.9397 -0.342,
+					  0.766 -0.6428,
+					  0.5 -0.866,
+					  0.1736 -0.9848,
+					  -0.1736 -0.9848,
+					  -0.5 -0.866,
+					  -0.766 -0.6428,
+					  -0.9397 -0.342,
+					  -1 0,
+					  -0.95 0,
+					  -0.8927 -0.3249,
+					  -0.7277 -0.6106,
+					  -0.475 -0.8227,
+					  -0.165 -0.9356,
+					  0.165 -0.9356,
+					  0.475 -0.8227,
+					  0.7277 -0.6106,
+					  0.8927 -0.3249,
+					  0.95 0,
+					  1 0 ]
+			orientation	[ 0 0 1  0,
+					  0 0 1  0 ]
+			scale	[ 1 1,
+					  1 1 ]
+			spine	[ 0 0 0,
+					  0 3 0 ]
+		}
+
+	}
+}
+DEF BottomCap Transform {
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+			}
+
+		}
+
+		geometry	Extrusion {
+			beginCap	TRUE
+			endCap	TRUE
+			ccw	TRUE
+			convex	TRUE
+			creaseAngle	0
+			solid	TRUE
+			crossSection	[ 1 0,
+					  0.9397 -0.342,
+					  0.766 -0.6428,
+					  0.5 -0.866,
+					  0.1736 -0.9848,
+					  -0.1736 -0.9848,
+					  -0.5 -0.866,
+					  -0.766 -0.6428,
+					  -0.9397 -0.342,
+					  -1 0,
+					  1 0 ]
+			orientation	[ 0 0 1  0,
+					  0 0 1  0 ]
+			scale	[ 1 1,
+					  1 1 ]
+			spine	[ 0 0 0,
+					  0 -0.05 0 ]
+		}
+
+	}
+}
+DEF Liquid Transform {
+	children Shape {
+		appearance	Appearance {
+			material	DEF LiqMat Material {
+				diffuseColor	0.25 0.51 0.8
+				transparency	0.5
+			}
+
+		}
+
+		geometry	Extrusion {
+			beginCap	TRUE
+			endCap	TRUE
+			ccw	FALSE
+			convex	TRUE
+			creaseAngle	0
+			solid	TRUE
+			crossSection	[ -0.95 0,
+					  -0.8927 -0.3249,
+					  -0.7277 -0.6106,
+					  -0.475 -0.8227,
+					  -0.165 -0.9356,
+					  0.165 -0.9356,
+					  0.475 -0.8227,
+					  0.7277 -0.6106,
+					  0.8927 -0.3249,
+					  0.95 0,
+					  -0.95 0 ]
+			orientation	[ 0 0 1  0,
+					  0 0 1  0 ]
+			scale	[ 1 1,
+					  1 1 ]
+			spine	[ 0 0 0,
+					  0 2 0 ]
+		}
+
+	}
+}
+DEF Jacket Transform {
+	translation	0 0.7 0
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    diffuseColor	0.8 0.711275 0.577935
+			    }
+
+		    }
+
+		    geometry	Extrusion {
+			    beginCap	FALSE
+			    endCap	FALSE
+			    ccw	TRUE
+			    convex	TRUE
+			    creaseAngle	0.785
+			    solid	TRUE
+			    crossSection	[ 1.2 0,
+					      1.1276 -0.4104,
+					      0.9193 -0.7713,
+					      0.6 -1.0392,
+					      0.2084 -1.1818,
+					      -0.2084 -1.1818,
+					      -0.6 -1.0392,
+					      -0.9193 -0.7713,
+					      -1.1276 -0.4104,
+					      -1.2 0,
+					      -1.15 0,
+					      -1.0806 -0.3933,
+					      -0.881 -0.7392,
+					      -0.575 -0.9959,
+					      -0.1997 -1.1325,
+					      0.1997 -1.1325,
+					      0.575 -0.9959,
+					      0.881 -0.7392,
+					      1.0806 -0.3933,
+					      1.15 0,
+					      1.2 0 ]
+			    orientation	[ 0 0 1  0,
+					      0 0 1  0 ]
+			    scale	[ 1 1,
+					      1 1 ]
+			    spine	[ 0 0 0,
+					      0 1.5 0 ]
+		    }
+
+	    }
+
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    diffuseColor	0.8 0.711275 0.577935
+			    }
+
+		    }
+
+		    geometry	Extrusion {
+			    beginCap	FALSE
+			    endCap	FALSE
+			    ccw	TRUE
+			    convex	TRUE
+			    creaseAngle	0.785
+			    solid	TRUE
+			    crossSection	[ 1.2 0,
+					      1.1276 -0.4104,
+					      0.9193 -0.7713,
+					      0.6 -1.0392,
+					      0.2084 -1.1818,
+					      -0.2084 -1.1818,
+					      -0.6 -1.0392,
+					      -0.9193 -0.7713,
+					      -1.1276 -0.4104,
+					      -1.2 0,
+					      -1 0,
+					      -0.9397 -0.342,
+					      -0.766 -0.6428,
+					      -0.5 -0.866,
+					      -0.1736 -0.9848,
+					      0.1736 -0.9848,
+					      0.5 -0.866,
+					      0.766 -0.6428,
+					      0.9397 -0.342,
+					      1 0,
+					      1.2 0 ]
+			    orientation	[ 0 0 1  0,
+					      0 0 1  0 ]
+			    scale	[ 1 1,
+					      1 1 ]
+			    spine	[ 0 0 0,
+					      0 -0.05 0 ]
+		    }
+
+	    }
+	]
+}
+DEF JacketTopCap Transform {
+	translation	0 2.2 0
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				diffuseColor	0.8 0.711275 0.577935
+			}
+
+		}
+
+		geometry	Extrusion {
+			beginCap	FALSE
+			endCap	FALSE
+			ccw	TRUE
+			convex	TRUE
+			creaseAngle	0.785
+			solid	TRUE
+			crossSection	[ 1.2 0,
+					  1.1276 -0.4104,
+					  0.9193 -0.7713,
+					  0.6 -1.0392,
+					  0.2084 -1.1818,
+					  -0.2084 -1.1818,
+					  -0.6 -1.0392,
+					  -0.9193 -0.7713,
+					  -1.1276 -0.4104,
+					  -1.2 0,
+					  -1 0,
+					  -0.9397 -0.342,
+					  -0.766 -0.6428,
+					  -0.5 -0.866,
+					  -0.1736 -0.9848,
+					  0.1736 -0.9848,
+					  0.5 -0.866,
+					  0.766 -0.6428,
+					  0.9397 -0.342,
+					  1 0,
+					  1.2 0 ]
+			orientation	[ 0 0 1  0,
+					  0 0 1  0 ]
+			scale	[ 1 1,
+					  1 1 ]
+			spine	[ 0 0 0,
+					  0 0.05 0 ]
+		}
+
+	}
+}
+DEF CoolingLiq Transform {
+	translation	0 0.7 0
+	children Shape {
+		appearance	Appearance {
+			material	DEF CoolMat Material {
+				diffuseColor	0.25 0.51 0.8
+				transparency	0.5
+			}
+
+		}
+
+		geometry	Extrusion {
+			beginCap	FALSE
+			endCap	FALSE
+			ccw	TRUE
+			convex	TRUE
+			creaseAngle	0
+			solid	FALSE
+			crossSection	[ 1.15 0,
+					  1.0806 -0.3933,
+					  0.881 -0.7392,
+					  0.575 -0.9959,
+					  0.1997 -1.1325,
+					  -0.1997 -1.1325,
+					  -0.575 -0.9959,
+					  -0.881 -0.7392,
+					  -1.0806 -0.3933,
+					  -1.15 0,
+					  -1 0,
+					  -0.9397 -0.342,
+					  -0.766 -0.6428,
+					  -0.5 -0.866,
+					  -0.1736 -0.9848,
+					  0.1736 -0.9848,
+					  0.5 -0.866,
+					  0.766 -0.6428,
+					  0.9397 -0.342,
+					  1 0,
+					  1.15 0 ]
+			orientation	[ 0 0 1  0,
+					  0 0 1  0 ]
+			scale	[ 1 1,
+					  1 1 ]
+			spine	[ 0 0 0,
+					  0 1.5 0 ]
+		}
+
+	}
+}
+DEF Stirrer Transform {
+	children [ 
+	    DEF Rod Transform {
+		    translation	0 1.9 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.8 0.676523 0.528272
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    radius	0.03
+			    }
+
+		    }
+	    }
+
+	    DEF LeftProp Transform {
+		    translation	0 0.9 0
+		    scale	0.3 0.3 0.3
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0 0.1 0.2
+				    }
+
+			    }
+
+			    geometry	Extrusion {
+				    beginCap	TRUE
+				    endCap	TRUE
+				    ccw	TRUE
+				    convex	TRUE
+				    creaseAngle	0.7
+				    solid	TRUE
+				    crossSection	[ -0.393531 0.335396,
+						      -0.0268316 0.0402475,
+						      -0.402475 -0.201237,
+						      -0.885444 -0.442722,
+						      -1.44891 -0.433778,
+						      -1.91399 -0.219125,
+						      -2.14653 -0.00447175,
+						      -1.91399 0.281732,
+						      -1.44891 0.532161,
+						      -0.948052 0.532161,
+						      -0.393531 0.335396 ]
+				    orientation	[ 0 1 0  0.0122168,
+						      0 0 1  0 ]
+				    scale	[ 1 0.8,
+						      1 1 ]
+				    spine	[ 0 0 0,
+						      0 0.0572778 0 ]
+			    }
+
+		    }
+	    }
+
+	    DEF RightProp Transform {
+		    translation	0 0.9 0
+		    rotation	0 1 0  3.14159
+		    scale	0.3 0.3 0.3
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0 0.1 0.2
+				    }
+
+			    }
+
+			    geometry	Extrusion {
+				    beginCap	TRUE
+				    endCap	TRUE
+				    ccw	TRUE
+				    convex	TRUE
+				    creaseAngle	0.7
+				    solid	TRUE
+				    crossSection	[ -0.393531 0.335396,
+						      -0.0268316 0.0402475,
+						      -0.402475 -0.201237,
+						      -0.885444 -0.442722,
+						      -1.44891 -0.433778,
+						      -1.91399 -0.219125,
+						      -2.14653 -0.00447175,
+						      -1.91399 0.281732,
+						      -1.44891 0.532161,
+						      -0.948052 0.532161,
+						      -0.393531 0.335396 ]
+				    orientation	[ 0 1 0  0.0122168,
+						      0 0 1  0 ]
+				    scale	[ 1 0.8,
+						      1 1 ]
+				    spine	[ 0 0 0,
+						      0 0.0572778 0 ]
+			    }
+
+		    }
+	    }
+	]
+}
+DEF Floor Transform {
+	translation	0 -0.15 0
+	children Shape {
+		appearance	Appearance {
+			texture	DEF Metal ImageTexture {
+				url	"texture/Metal.jpg"
+			}
+
+		}
+
+		geometry	Cylinder {
+			height	0.1
+			radius	2.4
+		}
+
+	}
+}
+DEF Inlet Transform {
+	translation	0 0 0
+	children [ 
+	    DEF InTop Transform {
+		    translation	-1.784 3.5 0
+		    rotation	0 0 -1  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	2
+				    radius	0.1
+			    }
+
+		    }
+	    }
+
+	    DEF Bend Transform {
+		    translation	-0.8 3.5 0
+		    rotation	0 0 -1  1.5708
+		    scale	0.12 0.12 0.12
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Extrusion {
+				    beginCap	TRUE
+				    endCap	TRUE
+				    ccw	TRUE
+				    convex	TRUE
+				    creaseAngle	0.7
+				    solid	TRUE
+				    crossSection	[ 1 -2.44921e-016,
+						      0.932472 -0.361242,
+						      0.739009 -0.673696,
+						      0.445738 -0.895164,
+						      0.0922675 -0.995734,
+						      -0.273664 -0.961825,
+						      -0.602635 -0.798017,
+						      -0.850218 -0.526432,
+						      -0.982973 -0.183749,
+						      -0.982973 0.18375,
+						      -0.850217 0.526433,
+						      -0.602634 0.798018,
+						      -0.273663 0.961826,
+						      0.0922688 0.995734,
+						      0.445739 0.895163,
+						      0.739009 0.673695,
+						      0.932472 0.361241,
+						      1 -2.44921e-016 ]
+				    orientation	[ 0 0 1  0,
+						      0 0 1  0,
+						      0 0 1  0,
+						      0 0 1  0,
+						      0 0 1  0 ]
+				    scale	[ 1 1,
+						      1 1,
+						      1 1,
+						      1 1,
+						      1 1 ]
+				    spine	[ 0 0 0,
+						      0.0268316 0.486584 0,
+						      0.187821 0.889059 0,
+						      0.590296 1.13054 0,
+						      1.18059 1.15738 0 ]
+			    }
+
+		    }
+	    }
+
+	    DEF InBottom Transform {
+		    translation	-0.66 3.08 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	0.6
+				    radius	0.1
+			    }
+
+		    }
+	    }
+	]
+}
+DEF Outlet Transform {
+	children Transform {
+		translation	1.9 0.2 0
+		rotation	0 0 1  1.5708
+		children Shape {
+			appearance	Appearance {
+				material	Material {
+				}
+
+			}
+
+			geometry	Cylinder {
+				height	2
+				radius	0.1
+			}
+
+		}
+	}
+}
+DEF InHot Transform {
+	children [ 
+	    DEF InTop Transform {
+		    translation	-1.904 3.3 0
+		    rotation	0 0 1  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.9 0.8 0.8
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	1.6
+				    radius	0.03
+			    }
+
+		    }
+	    }
+
+	    DEF Bend Transform {
+		    translation	-1.11 3.3 0
+		    rotation	0 0 -1  1.5708
+		    scale	0.04 0.04 0.04
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.9 0.8 0.8
+				    }
+
+			    }
+
+			    geometry	Extrusion {
+				    beginCap	TRUE
+				    endCap	TRUE
+				    ccw	TRUE
+				    convex	TRUE
+				    creaseAngle	0.7
+				    solid	TRUE
+				    crossSection	[ 1 -2.44921e-016,
+						      0.932472 -0.361242,
+						      0.739009 -0.673696,
+						      0.445738 -0.895164,
+						      0.0922675 -0.995734,
+						      -0.273664 -0.961825,
+						      -0.602635 -0.798017,
+						      -0.850218 -0.526432,
+						      -0.982973 -0.183749,
+						      -0.982973 0.18375,
+						      -0.850217 0.526433,
+						      -0.602634 0.798018,
+						      -0.273663 0.961826,
+						      0.0922688 0.995734,
+						      0.445739 0.895163,
+						      0.739009 0.673695,
+						      0.932472 0.361241,
+						      1 -2.44921e-016 ]
+				    orientation	[ 0 0 1  0,
+						      0 0 1  0,
+						      0 0 1  0,
+						      0 0 1  0,
+						      0 0 1  0 ]
+				    scale	[ 1 1,
+						      1 1,
+						      1 1,
+						      1 1,
+						      1 1 ]
+				    spine	[ 0 0 0,
+						      0.0268316 0.486584 0,
+						      0.187821 0.889059 0,
+						      0.590296 1.13054 0,
+						      1.18059 1.15738 0 ]
+			    }
+
+		    }
+	    }
+
+	    DEF InBottom Transform {
+		    translation	-1.06 2.7351 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.9 0.8 0.8
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	1.1
+				    radius	0.03
+			    }
+
+		    }
+	    }
+	]
+}
+DEF OutCold Transform {
+	children [ 
+	    DEF OutTop Transform {
+		    translation	1.096 0.6 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.8 0.8 0.9
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	0.25
+				    radius	0.03
+			    }
+
+		    }
+	    }
+
+	    DEF Bend Transform {
+		    translation	1.14 0.45 0
+		    rotation	0 0 1  1.5708
+		    scale	0.04 0.04 0.04
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.8 0.8 0.9
+				    }
+
+			    }
+
+			    geometry	Extrusion {
+				    beginCap	TRUE
+				    endCap	TRUE
+				    ccw	TRUE
+				    convex	TRUE
+				    creaseAngle	0.7
+				    solid	TRUE
+				    crossSection	[ 1 -2.44921e-016,
+						      0.932472 -0.361242,
+						      0.739009 -0.673696,
+						      0.445738 -0.895164,
+						      0.0922675 -0.995734,
+						      -0.273664 -0.961825,
+						      -0.602635 -0.798017,
+						      -0.850218 -0.526432,
+						      -0.982973 -0.183749,
+						      -0.982973 0.18375,
+						      -0.850217 0.526433,
+						      -0.602634 0.798018,
+						      -0.273663 0.961826,
+						      0.0922688 0.995734,
+						      0.445739 0.895163,
+						      0.739009 0.673695,
+						      0.932472 0.361241,
+						      1 -2.44921e-016 ]
+				    orientation	[ 0 0 1  0,
+						      0 0 1  0,
+						      0 0 1  0,
+						      0 0 1  0,
+						      0 0 1  0 ]
+				    scale	[ 1 1,
+						      1 1,
+						      1 1,
+						      1 1,
+						      1 1 ]
+				    spine	[ 0 0 0,
+						      0.0268316 0.486584 0,
+						      0.187821 0.889059 0,
+						      0.590296 1.13054 0,
+						      1.18059 1.15738 0 ]
+			    }
+
+		    }
+	    }
+
+	    DEF InBottom Transform {
+		    translation	1.93 0.45 0
+		    rotation	0 0 1  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.8 0.8 0.9
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	1.6
+				    radius	0.03
+			    }
+
+		    }
+	    }
+	]
+}
+#DEF Title Transform {
+#	translation	-1 3.7 0
+#	children Shape {
+#		appearance	Appearance {
+#			material	Material {
+#				diffuseColor	0 0 0
+#			}
+#
+#		}
+#
+#		geometry	Text {
+#			string	"CSTR Model"
+#			fontStyle	FontStyle {
+#				family	"SERIF"
+#				size	0.4
+#				style	"BOLD"
+#			}
+#
+#		}
+#
+#	}
+#}
+#DEF Logo Transform {
+#	translation	0 -0.2 0.2
+#	rotation	-1 0 0  0.408407
+#	children Transform {
+#		translation	0 0 1.9
+#		children Shape {
+#			appearance	Appearance {
+#				material	Material {
+#				}
+#
+#				textureTransform	TextureTransform {
+#					center	0 0
+#					scale	1 1
+#					translation	0 0
+#				}
+#
+#				texture	ImageTexture {
+#					url	"texture/I2C2Grey.jpg"
+#					repeatS	FALSE
+#					repeatT	FALSE
+#				}
+#
+#			}
+#
+#			geometry	Box {
+#				size	0.7 0.9 0.1001
+#			}
+#
+#		}
+#	}
+#}

@@ -1,0 +1,215 @@
+#VRML V2.0 utf8
+
+#Created with V-Realm Builder v2.0
+#Integrated Data Systems Inc.
+#www.ids-net.com
+
+
+WorldInfo {
+	title	"Inverted Pendulum on Cart"
+}
+Viewpoint {
+	orientation	-1 0 0  0.439823
+	position	0 5.8 12
+	description	"Normal"
+}
+NavigationInfo {
+	type	"EXAMINE"
+}
+Background {
+	groundAngle	[  ]
+	groundColor	0.8 0.718367 0.790653
+	skyAngle	[  ]
+	skyColor	0.8 0.744026 0.712079
+}
+DEF Cart Transform {
+	translation	0 0.75 0
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				diffuseColor	0.103841 0.0911578 0.8
+				shininess	0.5
+			}
+
+		}
+
+		geometry	Box {
+			size	3 0.6 2
+		}
+
+	}
+}
+DEF Pendulum Transform {
+	translation	0 0.56 0
+	children [ 
+	    Shape {
+	    }
+
+	    Transform {
+		    translation	0 2 0
+		    center	0 -1.4 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.977011 1 0.141643
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	3
+				    radius	0.1
+			    }
+
+		    }
+	    }
+	]
+}
+DEF Floor Shape {
+	appearance	Appearance {
+		material	Material {
+			diffuseColor	1 0.0504171 0.187355
+		}
+
+	}
+
+	geometry	Box {
+		size	13 0.1 2
+	}
+
+}
+DEF Ball Transform {
+	translation	0 0 0
+	children [ 
+	    Shape {
+	    }
+
+	    Transform {
+		    translation	0 4.1 0
+		    center	0 -4 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Sphere {
+				    radius	0.3
+			    }
+
+		    }
+	    }
+	]
+}
+DEF Bracket Transform {
+	children Transform {
+		translation	0 1.05 0
+		children Shape {
+			appearance	Appearance {
+				material	Material {
+					diffuseColor	0 0 0
+				}
+
+			}
+
+			geometry	Extrusion {
+				beginCap	TRUE
+				endCap	TRUE
+				ccw	TRUE
+				convex	TRUE
+				creaseAngle	0
+				solid	TRUE
+				crossSection	[ 0.1 0.45,
+						  0.5 0.2,
+						  0.5 0,
+						  -0.5 0,
+						  -0.5 0.2,
+						  -0.1 0.45,
+						  0.1 0.45 ]
+				orientation	[ 0 0 1  0,
+						  0 0 1  0 ]
+				scale	[ 1 1,
+						  1 1 ]
+				spine	[ 0 0 0.2,
+						  0 0 -0.2 ]
+			}
+
+		}
+	}
+}
+DEF Wheels Transform {
+	children [ 
+	    Transform {
+		    translation	1.1 0.25 -0.75
+		    rotation	1 0 0  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	0.3
+				    radius	0.2
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	1.1 0.25 0.75
+		    rotation	1 0 0  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	0.3
+				    radius	0.2
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	-1.1 0.25 0.75
+		    rotation	1 0 0  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	0.3
+				    radius	0.2
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	-1.1 0.25 -0.75
+		    rotation	1 0 0  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	0.3
+				    radius	0.2
+			    }
+
+		    }
+	    }
+	]
+}
