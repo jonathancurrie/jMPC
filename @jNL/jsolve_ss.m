@@ -36,11 +36,11 @@ if(counter > 0)
     %Try fsolve
     fx0 = y(end,:)'; %Take best guess so far
     if(exist('trnlsp','file') == 3)
-        [y,rub,flag] = trnlsp(f2,[],fx0,zeros(size(fx0))); %#ok<ASGLU> %Nonlinear equation solver      
+        [y,rub,flag] = opti_fsolve(f2,fx0); %#ok<ASGLU> %Nonlinear equation solver      
     elseif(exist('fsolve.m','file') == 2)
         [y,rub,flag] = fsolve(f2,fx0,optimset('Display','off')); %#ok<ASGLU> %Nonlinear equation solver
     else
-        error('No nonlinear equation solver available!\n\nEither supply the steady-state state vector (xss), %s you will need the Optimization Toolbox.','or');
+        error('No nonlinear equation solver available!\n\nEither supply the steady-state state vector (xss), download OPTI Toolbox, %s you will need the Optimization Toolbox.','or');
     end
     exit_flag = 2; 
 
