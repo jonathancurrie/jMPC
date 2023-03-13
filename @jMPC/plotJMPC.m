@@ -38,7 +38,7 @@ col = 2;        %two columns
 porder = [1 2 3 4]; %plot in normal order
 
 %Check for disturbances
-if(simres.opts.dist); 
+if(simres.opts.dist)
     col = 3;
     porder = [1 2 4 5 3 6];
 end
@@ -58,21 +58,8 @@ end
 
 %Setup Main Figure Name
 h(1) = figure(1);
-set(gcf,'NumberTitle','off');
-switch(lower(simres.mode))
-    case 'matlab'
-        set(gcf,'Name','jMPC Matlab Simulation');
-    case 'simulink'
-        set(gcf,'Name','jMPC Simulink Simulation');
-    case 'mex'
-        set(gcf,'Name','jMPC MEX Simulation');
-    case 'mpc toolbox'
-        set(gcf,'Name','MPC Toolbox Simulation');
-    case 'pil'
-        set(gcf,'Name','jMPC PIL Implementation');
-end
-clf(gcf)
-
+clf;
+set(h(1),'NumberTitle','off','Name','jMPC Simulation Overview');
 %****************** PLOT RESPONSE ******************%
 %All in one Figure Overview
 
@@ -96,6 +83,7 @@ else
     title('Outputs: y_p(k)'); 
 end
 ylabel('Amplitude');
+grid on;
 
 
 % Plot States
@@ -112,6 +100,7 @@ else
 end
 axis([0 simres.T ylim]);
 ylabel('Amplitude');
+grid on;
 
  % Plot Input
 subplot(2,col,porder(3));
@@ -125,12 +114,14 @@ else
     title('Input: u(k)'); xlabel('Sample'); ylabel('Amplitude');
 end
 axis([0 simres.T ylim]);
+grid on;
 
 %Plot Change in Input
 subplot(2,col,porder(4));
 stairs(k,del_u)
 title('Change in Input: \Delta u(k)'); xlabel('Sample'); ylabel('Amplitude');
 axis([0 simres.T ylim]);
+grid on;
 
 if(simres.opts.dist)
     % Plot Output Disturbance
@@ -138,12 +129,14 @@ if(simres.opts.dist)
     plot(k,simres.ydist)
     axis([0 simres.T ylim]);
     title('Measurement Noise'); ylabel('Amplitude');
+    grid on;
 
     %Plot Input Disturbance
     subplot(2,col,porder(6));
     stairs(k,simres.udist(1:simres.T+1,:))
     axis([0 simres.T ylim]);
     title('Unmeasured Input Disturbance'); xlabel('Sample'); ylabel('Amplitude');
+    grid on;
 end
 
 %****************** PLOT RESPONSE MODE 2 ******************%
@@ -162,6 +155,7 @@ if(nm_dist > 0)
 end
 
 if(strcmp(mode,'detail'))  
+    set(0,'DefaultFigureWindowStyle','docked')
     %Create a new axis for each input
     h(2) = figure(2);
     clf
@@ -220,6 +214,7 @@ if(strcmp(mode,'detail'))
             end
             if(inNlabel); title(['u_' num2str(i) ': ' MPCobj.mpcopts.InputNames{iman_u(iu)}]); else title(['u_',num2str(i)]); end
             if(inUlabel); ylabel(['[' MPCobj.mpcopts.InputUnits{iman_u(iu)} ']']); else ylabel('Amplitude'); end        
+            grid on;
             if(i == n_in)
                 xlabel('Sample');
             end
@@ -261,6 +256,7 @@ if(strcmp(mode,'detail'))
                 axis([0 simres.T ylim]);
             end
             if(inNlabel); title(['\Deltau_' num2str(i) ': Change in ' MPCobj.mpcopts.InputNames{iman_u(iu)}]); else title(['\Deltau_',num2str(i)]); end
+            grid on;
             if(i == n_in)
                 xlabel('Sample');
             end
@@ -350,6 +346,7 @@ if(strcmp(mode,'detail'))
             title(['y_',num2str(i)]);
         end
         if(outUlabel); ylabel(['[' MPCobj.mpcopts.OutputUnits{i} ']']); else ylabel('Amplitude'); end
+        grid on;
         if(i == n_out)
             xlabel('Sample');
         end

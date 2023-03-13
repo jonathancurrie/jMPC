@@ -38,7 +38,7 @@ classdef jMPC
 %   See also jMPC.sim jMPC.plot jMPC.mpcsolve jSIM jSS jNL jGUI ScrollPlot
     
 %   Jonathan Currie (C)
-%   Control Engineering 2011
+%   Control Engineering 2011-2023
 
     properties (SetAccess = private)
         Model           % Augmented jSS Model       
@@ -336,15 +336,10 @@ classdef jMPC
         
         %-- Auto Generate Embeddable Code --%
         function [bytes,qpres,mpcres,h] = embed(J,simopts,opts)            
-            em = which('jMathEmbed.c');
-            if(isempty(em))
-                error('The embed feature is only available in the commercial version of jMPC Toolbox. Please contact jocurrie@aut.ac.nz for more information.');
-            else
-                if(nargin < 3), opts = jMPCeset(); else opts = jMPCeset(opts); end
-                if(nargin < 2), simopts = []; end
-                %Generate code
-                [bytes,qpres,mpcres,h] = embedJMPC(J,simopts,opts);
-            end
+            if(nargin < 3), opts = jMPCeset(); else opts = jMPCeset(opts); end
+            if(nargin < 2), simopts = []; end
+            %Generate code
+            [bytes,qpres,mpcres,h] = embedJMPC(J,simopts,opts);
         end
 
         %-- Return MATLAB MPC Toolbox Object --%
