@@ -176,6 +176,7 @@ if(strcmp(mode,'detail'))
                 xlabel('Sample');
             end  
             axis([0 simres.T ylim]);
+            grid on;
         else %Manipulated Input
             stairs(k,u(1:T+1,iman_u(iu)),'color',[0.2 0.6 0.2])
             if(MPCobj.constraints.ucon)
@@ -230,6 +231,7 @@ if(strcmp(mode,'detail'))
             end            
             id = id + 1;
             axis([0 simres.T ylim]);
+            grid on;
         else %Manipulated Input
             stairs(k,del_u(:,iu),'r')
             if(MPCobj.constraints.delucon)            

@@ -12,6 +12,7 @@
 %% Linear Example
 clc
 clear
+close all
 % Parameters
 %Tank cross sectional area
 A1  = 15.5179; A2  = 15.5179; A3  = 15.5179; A4  = 15.5179;

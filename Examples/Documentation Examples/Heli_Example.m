@@ -1,5 +1,5 @@
 %% MPCTools 3-DOF Helicopter
-% Ref: J. �kesson (2006) MPCtools 1.0 Reference Manual, Lund Institute of
+% Ref: J. Akesson (2006) MPCtools 1.0 Reference Manual, Lund Institute of
 % Technology, page 24. Also similar to Quanser 3-DOF Helicopter except
 % reordered states.
 
@@ -126,9 +126,10 @@ plot(k,y,kk,sp,'k--')
 axis([1 T+1 -1.2 2.5])
 title('Linear Outputs: y_p(k)');
 ylabel('Amplitude');
+grid on;
 
 subplot(122)
 plot(k,ynl,kk,sp,'k--')
 axis([1 T+1 -1.2 2.5])
 title('Nonlinear Outputs: y_p(k)')
-
+grid on;

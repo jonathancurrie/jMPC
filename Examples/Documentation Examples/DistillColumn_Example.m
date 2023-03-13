@@ -1,5 +1,7 @@
 %% Distillation Column
 % Ref J. Hahn & T. F. Edgar (2002)
+clc
+clear
 
 %% Nonlinear Example
 %Parameters
