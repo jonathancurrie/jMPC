@@ -269,9 +269,10 @@ classdef jMPC
             %   plot(jMPCobj,jSIMobj,mode) specifies one of three types of
             %   plots available:
             %
-            %       'summary'   - standard plot (Default)
-            %       'detail'    - multiple figures for simulation detail
-            %       'timing'    - timing analysis of simulation
+            %       'summary'           - standard plot (Default)
+            %       'detail'            - multiple figures for simulation detail
+            %       'timing'            - timing analysis of simulation
+            %       'timingbreakdown'   - timing breakdown of a MATLAB simulation
             %
             %   plot(jMPCobj,jSIMobj,mode,plot_model) specifies if you
             %   would like to plot model states and outputs on top of the
@@ -295,7 +296,7 @@ classdef jMPC
                     else
                         error('You cannot perform a timing analysis on a Simulink or MATLAB MPC Toolbox Simulation');
                     end
-                case 'timing2'
+                case {'timingbreakdown','timing2'}
                     if(~isempty(simresult.timing))
                         h = timingplot(J,simresult,1);
                     else

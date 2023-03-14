@@ -98,7 +98,7 @@ try
         end
 
         %Simulate model
-        del_xm = sim(sModel,del_xm,um); timing.total(k) = toc(tstart);
+        del_xm = sim(sModel,del_xm,um); timing.total(k+1) = toc(tstart);
         %Sum State Increment
         xm = xm+del_xm(1:states); 
 
