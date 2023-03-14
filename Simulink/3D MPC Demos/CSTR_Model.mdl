@@ -42,8 +42,8 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2011-05-05T10:35:11Z</dcterms:created>
   <dc:creator>Jonathan Currie</dc:creator>
   <cp:lastModifiedBy>Jonathan Currie</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2023-03-12T21:34:24Z</dcterms:modified>
-  <cp:revision>24.0</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2023-03-13T19:51:32Z</dcterms:modified>
+  <cp:revision>24.1</cp:revision>
   <cp:version>R2022b</cp:version>
 </cp:coreProperties>
 
@@ -119,7 +119,7 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:24.0&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:24.1&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="LibraryLinkDisplay">none</P>
@@ -955,34 +955,34 @@ Sequence</P>
 __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2022b_20220222">
-  <System type="System" uuid="f28980d9-2562-4da4-a5ec-ebb069a54997">
-    <Interface type="Interface" uuid="73b956f4-bf63-4e72-ba31-1939fbdc301f"/>
+  <System type="System" uuid="5fd5b8ee-c42d-43c0-ab04-4fac811af636">
+    <Interface type="Interface" uuid="da5ae151-b132-49a9-99f6-ce27986d427e"/>
   </System>
 </MF0>
 __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <sltp_graph version="1.1" packageUris="http://schema.mathworks.com/mf0/sltp_mm/R2022b_202203181029">
-  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="3fc9d326-f3bf-436b-af07-1e9497c7dc00">
+  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="e597e80f-ea15-4d48-bac2-4c50a7d997a8">
     <priorityDirection>HighNumberLast</priorityDirection>
     <editorState type="sltp.mm.core.EditorState" uuid="70e27d46-8581-4bc2-be4c-3cceb240527a">
       <isSynchronized>true</isSynchronized>
       <panelState type="sltp.mm.core.EditorPanelState" uuid="7dbea7ab-a053-4666-86c6-7057d16c63f0"/>
     </editorState>
-    <rootTask type="sltp.mm.core.Task" uuid="5ca69cc2-73c1-474c-b11f-47fad4b4e57d">
-      <context type="sltp.mm.core.Context" uuid="3fc9d326-f3bf-436b-af07-1e9497c7dc00"/>
+    <rootTask type="sltp.mm.core.Task" uuid="114c16fd-6fe8-4e18-ab6d-18281b1b1591">
+      <context type="sltp.mm.core.Context" uuid="e597e80f-ea15-4d48-bac2-4c50a7d997a8"/>
       <explicit>false</explicit>
       <name>Default</name>
       <priority>-2147483648</priority>
-      <subgraph type="sltp.mm.core.Graph" uuid="6088cd5f-5feb-434a-a653-dc14a3c51789">
-        <tasks type="sltp.mm.core.Task" uuid="ffba173f-3f68-4a0c-b293-95c94facb5fb">
+      <subgraph type="sltp.mm.core.Graph" uuid="4e8557af-6208-47ae-9c3c-20882cee8d63">
+        <tasks type="sltp.mm.core.Task" uuid="5e94a0db-340c-483f-bb11-062bd18d11ec">
           <baseTask>true</baseTask>
-          <context type="sltp.mm.core.Context" uuid="3fc9d326-f3bf-436b-af07-1e9497c7dc00"/>
+          <context type="sltp.mm.core.Context" uuid="e597e80f-ea15-4d48-bac2-4c50a7d997a8"/>
           <explicit>false</explicit>
           <id>1</id>
           <isTimed>true</isTimed>
           <name>Cont</name>
           <priority>40</priority>
-          <rates type="sltp.mm.core.Rate" uuid="f633b4d7-953b-423f-93f6-147eeaf63363">
+          <rates type="sltp.mm.core.Rate" uuid="b067bb77-142f-4c81-bd60-e46362dd42d4">
             <annotation>Cont</annotation>
             <color>255</color>
             <hasBlocks>true</hasBlocks>
@@ -992,7 +992,7 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
             </rateSpec>
             <sti>0</sti>
           </rates>
-          <rates type="sltp.mm.core.Rate" uuid="410ce5c5-9d6e-4837-9d94-a5bd16eab111">
+          <rates type="sltp.mm.core.Rate" uuid="45ab3d68-6067-4bae-a5d1-d2182c8bf52d">
             <annotation>FiM</annotation>
             <color>-2139062017</color>
             <hasBlocks>true</hasBlocks>
@@ -1002,7 +1002,7 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
             </rateSpec>
             <sti>1</sti>
           </rates>
-          <rates type="sltp.mm.core.Rate" uuid="a2947c70-ca38-4d92-b377-c0aa9e250641">
+          <rates type="sltp.mm.core.Rate" uuid="ae742000-fe4b-4687-ad06-ab31d758c1af">
             <annotation>D1</annotation>
             <color>-436207361</color>
             <hasBlocks>true</hasBlocks>
@@ -1011,7 +1011,7 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
             </rateSpec>
             <sti>2</sti>
           </rates>
-          <rates type="sltp.mm.core.Rate" uuid="16737203-9456-4ddd-9626-a5282e99c0f4">
+          <rates type="sltp.mm.core.Rate" uuid="a0e0912e-e681-4c1b-8396-8f38caae4623">
             <annotation>D2</annotation>
             <color>13697279</color>
             <hasBlocks>true</hasBlocks>
@@ -1020,7 +1020,7 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
             </rateSpec>
             <sti>3</sti>
           </rates>
-          <rates type="sltp.mm.core.Rate" uuid="be6efacd-826d-448d-bb8e-e7dab9ec31b8">
+          <rates type="sltp.mm.core.Rate" uuid="cef9f4e7-6e1f-4e1e-8f6d-d603ffebf07e">
             <annotation>V1</annotation>
             <color>-1507120129</color>
             <hasBlocks>true</hasBlocks>
@@ -1573,7 +1573,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   <P Name="Location">[483, 187, 1306, 705]</P>
   <P Name="Open">on</P>
   <P Name="ReportName">simulink-default.rpt</P>
-  <P Name="SIDHighWatermark">77</P>
+  <P Name="SIDHighWatermark">78</P>
   <Block BlockType="SubSystem" Name="3D CSTR Model" SID="46">
     <PortCounts in="3" out="2"/>
     <P Name="Position">[485, 43, 645, 187]</P>
@@ -1645,18 +1645,23 @@ port_label(&apos;output&apos;, 2, &apos;Tr&apos;)</Display>
     <P Name="PulseWidth">50</P>
   </Block>
   <Block BlockType="Terminator" Name="Terminator" SID="64">
-    <P Name="Position">[355, 95, 375, 115]</P>
+    <P Name="Position">[355, 85, 375, 105]</P>
     <P Name="ZOrder">-8</P>
     <P Name="ShowName">off</P>
   </Block>
   <Block BlockType="Terminator" Name="Terminator1" SID="65">
-    <P Name="Position">[355, 125, 375, 145]</P>
+    <P Name="Position">[355, 110, 375, 130]</P>
     <P Name="ZOrder">-9</P>
     <P Name="ShowName">off</P>
   </Block>
   <Block BlockType="Terminator" Name="Terminator2" SID="66">
-    <P Name="Position">[355, 155, 375, 175]</P>
+    <P Name="Position">[355, 135, 375, 155]</P>
     <P Name="ZOrder">-10</P>
+    <P Name="ShowName">off</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator3" SID="78">
+    <P Name="Position">[355, 160, 375, 180]</P>
+    <P Name="ZOrder">1</P>
     <P Name="ShowName">off</P>
   </Block>
   <Line>
@@ -1735,6 +1740,11 @@ port_label(&apos;output&apos;, 2, &apos;Tr&apos;)</Display>
     <P Name="Points">[55, 0; 0, 95]</P>
     <P Name="Dst">46#in:3</P>
   </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">41#out:5</P>
+    <P Name="Dst">78#in:1</P>
+  </Line>
   <Annotation SID="77">
     <P Name="Name">Note the 3D model will automatically open upon starting the simulation</P>
     <P Name="Position">[211, 261, 523, 276]</P>
@@ -1755,7 +1765,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
         <P Name="DockPosition" Class="char">Left</P>
         <P Name="Width" Class="int32">50</P>
         <P Name="Height" Class="int32">50</P>
-        <P Name="Filter" Class="int32">8</P>
+        <P Name="Filter" Class="int32">9</P>
         <P Name="Minimized" Class="char">Unset</P>
       </Object>
       <Object PropName="ExplorerBarInfo" ObjectID="4" ClassName="Simulink.ExplorerBarInfo">
@@ -1802,7 +1812,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char">5e4d2a1c-1632-4e60-82cf-54d42e4bc61f</P>
     </Object>
-    <P Name="BDUuid" Class="char"/>
+    <P Name="BDUuid" Class="char">1c0594f1-50b4-43ae-88bb-f4173bdf8289</P>
   </Object>
 </WindowsInfo>
 

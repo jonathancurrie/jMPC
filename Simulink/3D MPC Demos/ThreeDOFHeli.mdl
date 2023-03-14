@@ -42,8 +42,8 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2011-05-04T09:09:22Z</dcterms:created>
   <dc:creator>Jonathan Currie</dc:creator>
   <cp:lastModifiedBy>Jonathan Currie</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2023-03-12T21:33:03Z</dcterms:modified>
-  <cp:revision>24.0</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2023-03-13T04:36:16Z</dcterms:modified>
+  <cp:revision>24.1</cp:revision>
   <cp:version>R2022b</cp:version>
 </cp:coreProperties>
 
@@ -119,7 +119,7 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:24.0&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:24.1&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="LibraryLinkDisplay">none</P>
@@ -949,34 +949,34 @@ Sequence</P>
 __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2022b_20220222">
-  <System type="System" uuid="0befcee8-7f2a-4061-9784-482eac50046c">
-    <Interface type="Interface" uuid="b023b3af-ef9a-4c06-a52e-c43b00ea5336"/>
+  <System type="System" uuid="2fe1d8cf-a108-486e-99a5-94ec2b7675c5">
+    <Interface type="Interface" uuid="c8f00646-a5da-4a17-8bd4-bc873f1f350e"/>
   </System>
 </MF0>
 __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <sltp_graph version="1.1" packageUris="http://schema.mathworks.com/mf0/sltp_mm/R2022b_202203181029">
-  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="1b35d487-dd53-4893-8172-597956f8c655">
+  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="d4fe27b8-b594-4d5b-bac0-0393b25228b7">
     <priorityDirection>HighNumberLast</priorityDirection>
     <editorState type="sltp.mm.core.EditorState" uuid="43add533-ae28-4ec4-a9cf-57aa0fdccb8c">
       <isSynchronized>true</isSynchronized>
       <panelState type="sltp.mm.core.EditorPanelState" uuid="6c0916df-8c27-49ce-93c7-bb4c9371c454"/>
     </editorState>
-    <rootTask type="sltp.mm.core.Task" uuid="36a2e45e-9ddc-4195-9002-d0e2d105a1de">
-      <context type="sltp.mm.core.Context" uuid="1b35d487-dd53-4893-8172-597956f8c655"/>
+    <rootTask type="sltp.mm.core.Task" uuid="4138ebaf-70c4-4da1-af9b-a1712db46e6a">
+      <context type="sltp.mm.core.Context" uuid="d4fe27b8-b594-4d5b-bac0-0393b25228b7"/>
       <explicit>false</explicit>
       <name>Default</name>
       <priority>-2147483648</priority>
-      <subgraph type="sltp.mm.core.Graph" uuid="3f3da46d-eb8d-4af2-a151-10a27de69f5f">
-        <tasks type="sltp.mm.core.Task" uuid="1347737e-ed02-491e-89df-559270124084">
+      <subgraph type="sltp.mm.core.Graph" uuid="c6303b1e-c1e5-4293-b1c0-b2b46fb09088">
+        <tasks type="sltp.mm.core.Task" uuid="af723430-7346-4658-bdd6-4884e9d4c37a">
           <baseTask>true</baseTask>
-          <context type="sltp.mm.core.Context" uuid="1b35d487-dd53-4893-8172-597956f8c655"/>
+          <context type="sltp.mm.core.Context" uuid="d4fe27b8-b594-4d5b-bac0-0393b25228b7"/>
           <explicit>false</explicit>
           <id>1</id>
           <isTimed>true</isTimed>
           <name>Cont</name>
           <priority>40</priority>
-          <rates type="sltp.mm.core.Rate" uuid="672a5573-96fb-4ad5-a7e0-3bcba0e1f1ef">
+          <rates type="sltp.mm.core.Rate" uuid="e52687eb-66ef-4b04-bc67-c88a231408b2">
             <annotation>Cont</annotation>
             <color>255</color>
             <hasBlocks>true</hasBlocks>
@@ -986,7 +986,7 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
             </rateSpec>
             <sti>0</sti>
           </rates>
-          <rates type="sltp.mm.core.Rate" uuid="92119d5d-01b8-431a-972c-12a16623c70d">
+          <rates type="sltp.mm.core.Rate" uuid="7f0a0a97-63db-4e76-a5f4-d36d52a413b0">
             <annotation>D1</annotation>
             <color>-436207361</color>
             <hasBlocks>true</hasBlocks>
@@ -995,7 +995,7 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
             </rateSpec>
             <sti>1</sti>
           </rates>
-          <rates type="sltp.mm.core.Rate" uuid="90fe1e31-01b2-4385-8172-d52d1db5d4f5">
+          <rates type="sltp.mm.core.Rate" uuid="df2e8767-3234-4d34-af85-fdef5443ae63">
             <annotation>D2</annotation>
             <color>13697279</color>
             <hasBlocks>true</hasBlocks>
@@ -1004,7 +1004,7 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
             </rateSpec>
             <sti>2</sti>
           </rates>
-          <rates type="sltp.mm.core.Rate" uuid="45031d88-478d-4796-977a-3303428f1a02">
+          <rates type="sltp.mm.core.Rate" uuid="0c3ddd88-2192-476e-95a6-331cfac0f1cd">
             <annotation>D3</annotation>
             <color>52479</color>
             <hasBlocks>true</hasBlocks>
@@ -1013,7 +1013,7 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
             </rateSpec>
             <sti>3</sti>
           </rates>
-          <rates type="sltp.mm.core.Rate" uuid="74fb9cc8-7022-4776-9fcc-df77000c1426">
+          <rates type="sltp.mm.core.Rate" uuid="b7340a67-d0ee-46e1-8be7-92d9214232c8">
             <annotation>D4</annotation>
             <color>1639841023</color>
             <hasBlocks>true</hasBlocks>
@@ -1134,6 +1134,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_24.xml
       <P Name="AutoView">on</P>
       <P Name="VideoDimensions">[]</P>
       <P Name="AllowVariableSize">off</P>
+      <P Name="FigureProperties">{&apos;Position&apos;, &apos;Name&apos;, &apos;Viewpoint&apos;, &apos;CameraBound&apos;, &apos;CameraDirection&apos;, &apos;CameraPosition&apos;, &apos;CameraUpVector&apos;, &apos;ZoomFactor&apos;, &apos;Antialiasing&apos;, &apos;Headlight&apos;, &apos;Lighting&apos;, &apos;NavPanel&apos;, &apos;Sound&apos;, &apos;StatusBar&apos;, &apos;Stereo3D&apos;, &apos;Stereo3DCameraOffset&apos;, &apos;Stereo3DHIT&apos;, &apos;ToolBar&apos;, &apos;Textures&apos;, &apos;Transparency&apos;, &apos;Triad&apos;, &apos;Wireframe&apos;, &apos;NavZones&apos;, &apos;NavMode&apos;, &apos;NavSpeed&apos;, &apos;CaptureFileFormat&apos;, &apos;CaptureFileName&apos;, &apos;Record2DCompressMethod&apos;, &apos;Record2DCompressQuality&apos;, &apos;Record2D&apos;, &apos;Record2DFileName&apos;, &apos;Record2DFPS&apos;; [5.0000000000000000e+00   9.2000000000000000e+01   5.7600000000000000e+02   3.5000000000000000e+02], &apos;3DOF Helicopter&apos;, &apos;Normal&apos;, &apos;on&apos;, [0.0000000000000000e+00   0.0000000000000000e+00  -1.0000000000000000e+00], [0.0000000000000000e+00   0.0000000000000000e+00   0.0000000000000000e+00], [0.0000000000000000e+00   1.0000000000000000e+00   0.0000000000000000e+00], [1.0000000000000000e+00], &apos;on&apos;, &apos;on&apos;, &apos;on&apos;, &apos;halfbar&apos;, &apos;on&apos;, &apos;on&apos;, &apos;off&apos;, [1.0000000149011612e-01], [0.0000000000000000e+00], &apos;on&apos;, &apos;on&apos;, &apos;on&apos;, &apos;none&apos;, &apos;off&apos;, &apos;off&apos;, &apos;fly&apos;, &apos;normal&apos;, &apos;tif&apos;, &apos;%f_anim_%n.tif&apos;, &apos;auto&apos;, [7.5000000000000000e+01], &apos;off&apos;, &apos;%f_anim_%n.avi&apos;, &apos;auto&apos;} </P>
     </InstanceData>
   </Block>
   <Block BlockType="Constant" Name="Constant" SID="52">
@@ -1401,7 +1402,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   <P Name="Location">[762, 249, 1583, 728]</P>
   <P Name="Open">on</P>
   <P Name="ReportName">simulink-default.rpt</P>
-  <P Name="SIDHighWatermark">56</P>
+  <P Name="SIDHighWatermark">57</P>
   <Block BlockType="SubSystem" Name="3D Helicopter Model" SID="24">
     <PortCounts in="2" out="3"/>
     <P Name="Position">[415, 47, 625, 203]</P>
@@ -1476,18 +1477,23 @@ port_label(&apos;output&apos;, 3, &apos;Pitch&apos;)
     <P Name="SampleTime">30</P>
   </Block>
   <Block BlockType="Terminator" Name="Terminator" SID="46">
-    <P Name="Position">[315, 90, 335, 110]</P>
+    <P Name="Position">[315, 80, 335, 100]</P>
     <P Name="ZOrder">-8</P>
     <P Name="ShowName">off</P>
   </Block>
   <Block BlockType="Terminator" Name="Terminator1" SID="47">
-    <P Name="Position">[315, 120, 335, 140]</P>
+    <P Name="Position">[315, 105, 335, 125]</P>
     <P Name="ZOrder">-9</P>
     <P Name="ShowName">off</P>
   </Block>
   <Block BlockType="Terminator" Name="Terminator2" SID="48">
-    <P Name="Position">[315, 150, 335, 170]</P>
+    <P Name="Position">[315, 130, 335, 150]</P>
     <P Name="ZOrder">-10</P>
+    <P Name="ShowName">off</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator3" SID="57">
+    <P Name="Position">[315, 155, 335, 175]</P>
+    <P Name="ZOrder">1</P>
     <P Name="ShowName">off</P>
   </Block>
   <Line>
@@ -1551,20 +1557,22 @@ port_label(&apos;output&apos;, 3, &apos;Pitch&apos;)
   <Line>
     <P Name="ZOrder">11</P>
     <P Name="Src">16#out:2</P>
-    <P Name="Points">[0, 10]</P>
     <P Name="Dst">46#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">12</P>
     <P Name="Src">16#out:4</P>
-    <P Name="Points">[0, 20]</P>
     <P Name="Dst">48#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">13</P>
     <P Name="Src">16#out:3</P>
-    <P Name="Points">[0, 15]</P>
     <P Name="Dst">47#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">16#out:5</P>
+    <P Name="Dst">57#in:1</P>
   </Line>
   <Annotation SID="56">
     <P Name="Name">If the 3D Animation does not open automatically double click the VR Sink block inside the Helicopter Block </P>
@@ -1586,7 +1594,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
         <P Name="DockPosition" Class="char">Left</P>
         <P Name="Width" Class="int32">50</P>
         <P Name="Height" Class="int32">50</P>
-        <P Name="Filter" Class="int32">8</P>
+        <P Name="Filter" Class="int32">9</P>
         <P Name="Minimized" Class="char">Unset</P>
       </Object>
       <Object PropName="ExplorerBarInfo" ObjectID="4" ClassName="Simulink.ExplorerBarInfo">
@@ -1633,7 +1641,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char">ed8c8b41-b6e0-4fb7-b00b-82bb8a1c16dd</P>
     </Object>
-    <P Name="BDUuid" Class="char"/>
+    <P Name="BDUuid" Class="char">db56ff99-3845-4c18-b687-9cff78a0f0e5</P>
   </Object>
 </WindowsInfo>
 

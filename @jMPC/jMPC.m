@@ -150,7 +150,7 @@ classdef jMPC
             %
             %   jSIMobj = sim(jMPCobj,jSIMobj,mode) simulates the supplied
             %   Model Predictive Controller (jMPCobj) within the supplied
-            %   Simulation Environment (jSIMobj). There are three modes:
+            %   Simulation Environment (jSIMobj). There are four modes:
             %
             %       'Matlab'     - Using the class functions
             %       'Simulink'   - Using a Simulink implementation (Beta)
@@ -233,16 +233,12 @@ classdef jMPC
                     simresult.timing = struct('total',[]);
                     simresult.opts.result = 1;
                     simresult.mode = 'MPC Toolbox [Double Precision]';
-                case {'mex','mex mkl'}
+                case 'mex'
                     if(isa(simopts.Plant,'jNL')); error('Currently Nonlinear Models cannot be simulated using the MEX jMPCEngine'); end
-                    if(strcmpi(mode,'mex mkl'))
-                        plotvec = jMPCEngineMKL(J,simopts);
+                    if(J.mpcopts.Single)
+                        plotvec = jMPCSEngine(J,single(simopts));
                     else
-                        if(J.mpcopts.Single)
-                            plotvec = jMPCSEngine(J,single(simopts));
-                        else
-                            plotvec = jMPCEngine(J,simopts);
-                        end
+                        plotvec = jMPCEngine(J,simopts);
                     end
                     %Create Result Object
                     simresult = simopts;
