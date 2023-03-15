@@ -45,6 +45,8 @@ ywt = [12 0 5]'; %[elev pit rot]
 Q = 2*eye(6); R = 0.1*eye(3); Q(4,4) = 1; Q(5,5) = 1; Q(6,6) = 0.1;
 Kest = dlqe(Model,Q,R);
 
+%Single precision, lower QP tol for speed and set initial control at
+%linearization point
 opts = jMPCset('Single',1,'QPTol',1e-4,'InitialU',Vop);
 
 %-- Build MPC & Simulation --%
@@ -53,13 +55,14 @@ simopts = jSIM(MPC1,Plant,T,setp);
 %Add serial port connected to 3-DOF acquisition system
 sd = serial('COM6','BaudRate',1250000);
 simopts.opts.serialdevice = sd;
+
 %-- Simulate & Plot Result --%
 simresult = sim(MPC1,simopts)
 plot(MPC1,simresult,'timing');
 
 
 %% Embed The Controller (assumes we are in Matlab\jMPC\Examples\Quanser 3DOF Helicopter\ folder)
-eopts = jMPCeset('arch','c2000','accelqp',1,'dir','..\..\..\Testing\EmbedMPC\');
+eopts = jMPCeset('arch','c2000');
 embed(MPC1,simopts,eopts);
 
 
@@ -69,6 +72,8 @@ embed(MPC1,simopts,eopts);
 simhelipil = sim(MPC1,simopts,'PIL')
 plot(MPC1,simhelipil,'timing');
 
+%% Compare to MATLAB Sim
+compare(MPC1,simresult,simhelipil);
 
 %% Run Embedded Controller and Record [USE TI Project HeliMPC]
 % IMPORTANT: Start the controller FIRST before running this code.
@@ -76,7 +81,7 @@ clc
 fclose(sd);
 
 %Number of samples to collect (time = n*Ts)
-n = 5000;
+n = 2000;
 
 %Preallocate
 u = zeros(2,n);
@@ -112,6 +117,9 @@ fclose(sd);
 %% Optionally Save Data
 % save helimpc u xm ym yp setp time iter status MPC1 simopts
 
+%% Optionally Load Data
+load helimpc;
+n = 2000;
 
 %% Plot Results
 Ts = MPC1.Model.Ts;
@@ -122,7 +130,7 @@ idx = true(T,1);
 clf;
 subplot(321);
 plot(k,yp(1,idx)*180/pi,'r'); hold on; plot(k,setp(1,idx)*180/pi,'--','color',jcolour('spgrey')); hold off;
-set(gca,'XTickLabel',[],'ylim',[0 18],'xlim',[0 (T-1)*Ts]); 
+set(gca,'XTickLabel',[],'ylim',[0 20],'xlim',[0 (T-1)*Ts]); 
 ylabel('Elevation [\circ]'); 
 
 subplot(322);
@@ -134,7 +142,7 @@ ylabel('Pitch [\circ]');
 subplot(323);
 plot(k,yp(3,idx)*180/pi,'r'); hold on; plot(k,setp(2,idx)*180/pi,'--','color',jcolour('spgrey')); hold off;
 % h = hline(-1.1*180/pi,'r:'); set(h,'color',jcolour('softgrey'));
-set(gca,'XTickLabel',[],'ylim',[-50 230],'xlim',[0 (T-1)*Ts]);
+set(gca,'XTickLabel',[],'ylim',[-150 150],'xlim',[0 (T-1)*Ts]);
 ylabel('Rotation [\circ]'); 
 
 subplot(324);
@@ -158,7 +166,7 @@ ylabel('Execution Time [ms]'); xlabel('Simulation Time [s]');
 axes('Position',[0 0 1 1],'Visible','off','Tag','CommonTitle');
 text(0.3,0.98,'Embedded MPC Control of the 3DOF Helicopter')
 
-squeezefigs(3,3,-0.1,[],false)
-boldfigs(2,13)
-set(gcf,'position',jsize('32'));
+% squeezefigs(3,3,-0.1,[],false)
+% boldfigs(2,13)
+% set(gcf,'position',jsize('32'));
 % printplot('../figs/embedmpc/helimpcsp');

@@ -45,6 +45,11 @@ simopts = jSIM(MPC1,Plant,T,setp);
 simresult = sim(MPC1,simopts)
 plot(MPC1,simresult);
 
+%% Compare Simulation Methods
+simresultML = sim(MPC1,simopts,'matlab');
+simresultMX = sim(MPC1,simopts,'mex');
+compare(MPC1,simresultML,simresultMX)
+
 %% Rossiter MIMO Model
 % Ref: J Rossiter (2004), Model-Based Predictive Control, A Practical
 % Approach, CRC Press (Accompanying Software Example).
