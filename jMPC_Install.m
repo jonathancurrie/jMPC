@@ -35,12 +35,11 @@ fprintf('\n- Adding jMPC Paths to MATLAB Search Path...');
 genp = genpath(cd);
 genp = regexp(genp,';','split');
 %Folders to exclude from adding to Matlab path
-remInd1 = strfind(genp,'vti_cnf');
-remInd2 = strfind(genp,'vti_pvt');
+remInd1 = strfind(genp,'.git');
 ind = [];
 %Can't seem a way to check if cells are empty as a vector?
 for i = 1:length(remInd1)
-    if(any(remInd1{i}) || any(remInd2{i}))
+    if(any(remInd1{i}))
         ind = [ind i];  %#ok<AGROW>
     end 
 end
