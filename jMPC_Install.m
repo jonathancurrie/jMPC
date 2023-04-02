@@ -1,8 +1,25 @@
-function jMPC_Install
-%% Installation File for jMPC
+function jMPC_Install(savePath,runTests,openBrowser)
+% jMPC Toolbox Installation File
+%
+%  jMPC_Install(savePath, runTests, openBrowser)
+%
+%   savePath: Save the paths added by jMPC to the MATLAB path 
+%   runTests: Run the post-installation tests 
+%   openBrowser: Whether to open the jMPC Toolbox Website after installation 
+%
+% All arguments are optional and if not supplied, the user will be prompted
+% to enter their selection in the MATLAB Command Window. True is the
+% default option for each argument.
+%
+% You MUST be in the current directory of this file!
+%
+%   Copyright (C) 2023 Jonathan Currie (Control Engineering)
+%   https://controlengineering.co.nz/Wikis/jMPC/
 
-% In order to run this tool, please run this file to setup the required
-% directories. You MUST be in the current directory of this file!
+% Handle missing input args
+if (nargin < 3), openBrowser = []; end
+if (nargin < 2), runTests = []; end
+if (nargin < 1), savePath = []; end
 
 cpath = cd;
 
@@ -50,7 +67,11 @@ addpath(genp{:});
 rehash
 fprintf('Done\n\n');
 
-in = input('- Would You Like To Save the Path Changes? (Recommended) (y/n): ','s');
+if (isempty(savePath))
+    in = input('- Would You Like To Save the Path Changes? (Recommended) (y/n): ','s');
+else
+    in = bool2yn(savePath);
+end
 if(strcmpi(in,'y'))
     try
         savepath;
@@ -62,11 +83,20 @@ if(strcmpi(in,'y'))
 end
 fprintf('\n');
 
-in = input('- Would You Like To Run Post Installation Tests? (Recommended) (y/n): ','s');
+if (isempty(runTests))
+    in = input('- Would You Like To Run Post Installation Tests? (Recommended) (y/n): ','s');
+else
+    in = bool2yn(runTests);
+end    
 if(strcmpi(in,'y'))
     jMPC_Install_Test(1);
 end
 fprintf('\n');
+
+%Launch Examples page
+if (isempty(openBrowser) || (openBrowser == true))
+    web('https://controlengineering.co.nz/Wikis/jMPC/index.php/Examples/Examples','-browser');
+end
 
 fprintf('\njMPC Toolbox Installation Complete!\n');
 disp('------------------------------------------------')
@@ -210,4 +240,11 @@ if(missing)
     OK = false;
 else
     OK = true;
+end
+
+function in = bool2yn(val)
+if (isempty(val) || val == true)
+    in = 'y';
+else
+    in = 'n';
 end
