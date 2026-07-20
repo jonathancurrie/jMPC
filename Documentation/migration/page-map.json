@@ -1,0 +1,34 @@
+{
+  "groups": {
+    "CaseStudies": "case-studies",
+    "Embedded": "embedded",
+    "GUI": "api/gui",
+    "MPC": "api/mpc",
+    "Nonlinear": "api/nonlinear",
+    "SimOpts": "api/simulation-options",
+    "Simulink": "simulink",
+    "StateSpace": "api/state-space"
+  },
+  "pages": {
+    "Main.HomePage": "index.md",
+    "Main.WhatIsJMPC": "what-is-jmpc.md",
+    "DL.DownloadJMPC": "download.md",
+    "DL.License": "license.md",
+    "Help.FAQ": "faq.md",
+    "Help.Cite": "citation.md",
+    "Examples.Examples": "examples/index.md",
+    "Docs.MPC": "concepts/model-predictive-control.md",
+    "Docs.QP": "concepts/quadratic-programming.md",
+    "Docs.Nomenclature": "concepts/nomenclature.md",
+    "RefFuncs.StateSpace": "api/state-space/index.md",
+    "RefFuncs.Nonlinear": "api/nonlinear/index.md",
+    "RefFuncs.MPC": "api/mpc/index.md",
+    "RefFuncs.SimOpts": "api/simulation-options/index.md",
+    "RefFuncs.Solvers": "api/solvers.md",
+    "RefFuncs.GUI": "api/gui/index.md",
+    "GUI.Overview": "api/gui/overview.md",
+    "MPC.JMPCset": "api/mpc/jmpcset.md",
+    "Embedded.Overview": "embedded/index.md",
+    "Simulink.3D": "simulink/3d-animation.md"
+  }
+}

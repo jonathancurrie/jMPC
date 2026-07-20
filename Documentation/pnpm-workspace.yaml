@@ -1,0 +1,4 @@
+allowBuilds:
+  core-js: true
+minimumReleaseAgeExclude:
+  - pnpm@11.15.0

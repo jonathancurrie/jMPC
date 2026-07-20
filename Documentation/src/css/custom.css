@@ -1,0 +1,193 @@
+@import 'katex/dist/katex.min.css';
+
+:root {
+  --ifm-color-primary: #a21836;
+  --ifm-color-primary-dark: #92162f;
+  --ifm-color-primary-darker: #8a142e;
+  --ifm-color-primary-darkest: #711126;
+  --ifm-color-primary-light: #b21a3b;
+  --ifm-color-primary-lighter: #ba1c3e;
+  --ifm-color-primary-lightest: #d42b4d;
+  --ifm-code-font-size: 92%;
+  --ifm-heading-font-weight: 650;
+  --migrated-docs-chrome: #1c1c1c;
+  --migrated-docs-footer: #272727;
+  --migrated-docs-chrome-link: #bababa;
+  --migrated-docs-accent-soft:
+    color-mix(in srgb, var(--ifm-color-primary) 9%, transparent);
+  --migrated-docs-accent-strong:
+    color-mix(in srgb, var(--ifm-color-primary) 15%, transparent);
+  --migrated-docs-row-stripe:
+    color-mix(in srgb, var(--ifm-font-color-base) 4%, transparent);
+  --ifm-navbar-background-color: var(--migrated-docs-chrome);
+  --ifm-navbar-link-color: var(--migrated-docs-chrome-link);
+  --ifm-navbar-link-hover-color: #ffffff;
+  --ifm-navbar-shadow: 0 1px 0 rgb(0 0 0 / 45%);
+  --docusaurus-highlighted-code-line-bg:
+    color-mix(in srgb, var(--ifm-color-primary) 12%, transparent);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #ff7189;
+  --ifm-color-primary-dark: #ff4e6c;
+  --ifm-color-primary-darker: #ff3c5e;
+  --ifm-color-primary-darkest: #ff082f;
+  --ifm-color-primary-light: #ff94a6;
+  --ifm-color-primary-lighter: #ffa6b4;
+  --ifm-color-primary-lightest: #ffcad2;
+  --migrated-docs-chrome: #151515;
+  --migrated-docs-accent-soft:
+    color-mix(in srgb, var(--ifm-color-primary) 10%, transparent);
+  --migrated-docs-accent-strong:
+    color-mix(in srgb, var(--ifm-color-primary) 17%, transparent);
+  --migrated-docs-row-stripe:
+    color-mix(in srgb, var(--ifm-font-color-base) 5%, transparent);
+  --docusaurus-highlighted-code-line-bg:
+    color-mix(in srgb, var(--ifm-color-primary) 18%, transparent);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  border-bottom: 3px solid var(--ifm-color-primary);
+}
+
+.navbar__title,
+.navbar__brand:hover .navbar__title,
+.navbar__link:hover,
+.navbar__link--active {
+  color: #ffffff;
+}
+
+.navbar__title {
+  letter-spacing: 0.01em;
+}
+
+.navbar__link {
+  border-radius: 0.25rem;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  background:
+    color-mix(in srgb, var(--ifm-color-primary) 20%, transparent);
+  text-decoration: none;
+}
+
+.navbar .clean-btn {
+  color: #eaeaea;
+}
+
+.navbar-sidebar {
+  background: var(--ifm-background-color);
+}
+
+.navbar-sidebar__brand {
+  background: var(--migrated-docs-chrome);
+  border-bottom: 3px solid var(--ifm-color-primary);
+}
+
+.menu__link:hover {
+  background: var(--migrated-docs-accent-soft);
+  color: var(--ifm-color-primary-dark);
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  background: var(--migrated-docs-accent-strong);
+  box-shadow: inset 3px 0 0 var(--ifm-color-primary);
+  color: var(--ifm-color-primary-dark);
+  font-weight: 700;
+}
+
+[data-theme='dark'] .menu__link:hover,
+[data-theme='dark'] .menu__link--active:not(.menu__link--sublist) {
+  color: var(--ifm-color-primary);
+}
+
+.theme-doc-markdown {
+  max-width: 980px;
+}
+
+.theme-doc-markdown > h2 {
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  border-left: 3px solid var(--ifm-color-primary);
+  color: var(--ifm-heading-color);
+  padding-left: 0.65rem;
+  padding-bottom: 0.35rem;
+}
+
+.theme-doc-markdown img {
+  border-radius: 0.35rem;
+  display: block;
+  height: auto;
+  margin: 1.5rem auto;
+  max-width: 100%;
+}
+
+.theme-doc-markdown table {
+  display: table;
+  font-size: 0.94rem;
+  width: 100%;
+}
+
+.theme-doc-markdown table thead {
+  background: var(--migrated-docs-chrome);
+  box-shadow: inset 0 3px 0 var(--ifm-color-primary);
+  color: #ffffff;
+}
+
+.theme-doc-markdown table thead a {
+  color: #ffffff;
+}
+
+.theme-doc-markdown table tbody tr:nth-child(even) {
+  background: var(--migrated-docs-row-stripe);
+}
+
+/* GFM requires a header row, while many PmWiki tables are headerless. */
+.theme-doc-markdown table thead:not(:has(th:not(:empty))) {
+  display: none;
+}
+
+.theme-code-block {
+  box-shadow:
+    0 1px 3px
+    color-mix(in srgb, var(--ifm-color-primary) 16%, transparent);
+}
+
+.pagination-nav__link:hover {
+  background: var(--migrated-docs-accent-soft);
+  border-color: var(--ifm-color-primary);
+}
+
+.footer--dark {
+  --ifm-footer-background-color: var(--migrated-docs-footer);
+  border-top: 3px solid var(--ifm-color-primary);
+}
+
+.footer--dark .footer__title {
+  color: color-mix(in srgb, var(--ifm-color-primary) 65%, white);
+}
+
+.footer--dark .footer__link-item:hover {
+  color: #ffffff;
+}
+
+small {
+  color: var(--ifm-color-emphasis-700);
+}
+
+@media (max-width: 700px) {
+  .theme-doc-markdown {
+    overflow-wrap: anywhere;
+  }
+
+  .theme-doc-markdown table {
+    display: block;
+    font-size: 0.84rem;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
