@@ -1,5 +1,5 @@
 ---
-title: "jMPC Toolbox Wiki"
+title: "jMPC Toolbox"
 slug: "/"
 ---
 
@@ -10,6 +10,10 @@ To get right into it, jump to the [downloads](./download.md) page!
 ----
 
 ## News
+
+- **20th July 2026**
+
+  The jMPC Wiki has been migrated to GitHub Pages, with improved navigation, search, and mobile support.
 
 - **15th March 2023**
 
