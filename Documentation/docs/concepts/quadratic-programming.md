@@ -3,7 +3,7 @@ title: "Quadratic Programming Overview"
 slug: "/concepts/quadratic-programming/"
 ---
 
-As detailed in the [MPC](./model-predictive-control.md) overview the optimization problem that is to be solved at each sample is formulated as a [Quadratic Programming (QP) Problem](https://www.controlengineering.co.nz/Wikis/OPTI/pmwiki.php/Probs/QP). This page gives a very brief overview of what a QP is within the MPC context and this toolbox.
+As detailed in the [MPC](./model-predictive-control.md) overview the optimization problem that is to be solved at each sample is formulated as a [Quadratic Programming (QP) Problem](https://jonathancurrie.github.io/OPTI/examples/problem-types/qp/). This page gives a very brief overview of what a QP is within the MPC context and this toolbox.
 
 ## Standard jMPC QP Problem
 The QP solved by the jMPC Toolbox takes the following form:
