@@ -52,18 +52,23 @@ fprintf('\n- Adding jMPC Paths to MATLAB Search Path...');
 genp = genpath(cd);
 genp = regexp(genp,';','split');
 %Folders to exclude from adding to Matlab path
-remInd1 = strfind(genp,'.git');
-ind = [];
-%Can't seem a way to check if cells are empty as a vector?
-for i = 1:length(remInd1)
-    if(any(remInd1{i}))
-        ind = [ind i];  %#ok<AGROW>
-    end 
+i = 1;
+rInd{:,:,i} = strfind(genp,'Documentation'); i = i + 1;
+rInd{:,:,i} = strfind(genp,'.git'); i = i + 1;
+rInd{:,:,i} = strfind(genp,'.github'); i = i + 1;
+ind = NaN(length(rInd{1}),1);
+%Track indices of paths to remove from list
+for i = 1:length(rInd{1})
+    for j = 1:size(rInd,3)
+        if(any(rInd{j}{i}))
+            ind(i) = 1;
+        end
+    end
 end
-%Remove paths from above and add to matlab path
-genp(ind) = [];
-addpath(genp{:});
 
+%Remove paths from above and add to matlab path
+genp(ind == 1) = [];
+addpath(genp{:});
 rehash
 fprintf('Done\n\n');
 
@@ -95,7 +100,7 @@ fprintf('\n');
 
 %Launch Examples page
 if (isempty(openBrowser) || (openBrowser == true))
-    web('https://controlengineering.co.nz/Wikis/jMPC/index.php/Examples/Examples','-browser');
+    web('https://jonathancurrie.github.io/jMPC/examples/','-browser');
 end
 
 fprintf('\njMPC Toolbox Installation Complete!\n');
